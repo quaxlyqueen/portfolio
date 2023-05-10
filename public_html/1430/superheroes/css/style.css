@@ -1,0 +1,52 @@
+body {
+
+	font-family: Lato, sans-serif;
+	font-size: 1em;
+
+	color: white;
+
+}
+
+h1 {
+
+	font-size: 4em;
+	font-style: italic;
+
+}
+
+h2 {
+
+	font-size: 2em;
+
+}
+
+p {
+
+	padding-left: 3em;
+	padding-right: 3em;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+p:hover {
+
+	white-space: normal;
+
+}
+
+.dc {
+
+	background-color: darkblue;
+	padding: 1em;
+
+}
+
+.marvel {
+
+	background-color: darkred;
+	padding: 1em;
+
+}
