@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Tic-Tac-Toe</title>
+
+  </head>
+
+  <body>
+
+    <div id="output">
+
+      <h1 id="output-text"></h1>
+      <button id="clear" onclick="resetAndClear()" hidden>Clear</button>
+
+    </div>
+
+    <div class="grid">
+
+      <div class="box" id="0" onclick="clickTracker(this)"></div>
+      <div class="box" id="1" onclick="clickTracker(this)"></div>
+      <div class="box" id="2" onclick="clickTracker(this)"></div>
+
+      <div class="box" id="3" onclick="clickTracker(this)"></div>
+      <div class="box" id="4" onclick="clickTracker(this)"></div>
+      <div class="box" id="5" onclick="clickTracker(this)"></div>
+
+      <div class="box" id="6" onclick="clickTracker(this)"></div>
+      <div class="box" id="7" onclick="clickTracker(this)"></div>
+      <div class="box" id="8" onclick="clickTracker(this)"></div>
+
+    </div>
+
+    <table>
+
+      <tr>
+
+        <th id="playerX"></th>
+        <th id="playerO"></th>
+
+      </tr>
+
+      <tr>
+
+        <td id="xScore"></td>
+        <td id="oScore"></td>
+
+      </tr>
+
+    </table>
+
+  </body>
+
+  <footer>
+
+    <script src="js/script.js"></script>
+
+  </footer>
+
+</html>

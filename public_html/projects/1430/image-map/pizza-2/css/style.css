@@ -1,0 +1,309 @@
+/*GENERAL*/
+
+        :root {
+
+            --main-dark-color: #162521;
+            --main-offwhite-color: #F7F7FF;
+            --main-midtone-color: #9BC995;
+            --main-accent-color: #EEF36A;
+            --secondary-accent-color: #98B9AB;
+
+        }
+
+        * {
+
+            margin: auto;
+            position: relative;
+
+            font-family: Lato;
+            font-size: 1em;
+            color: var(--main-offwhite-color);
+
+        }
+
+        html {
+
+            background-color: var(--main-dark-color);
+            margin-bottom: 5em;
+
+        }
+
+        main {
+
+            max-width: 1200px;
+
+        }
+
+        h1 {
+
+            font-size: 10em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            text-align: center;
+
+        }
+
+        h2 {
+
+            font-size: 5em;
+            text-align: center;
+
+        }
+
+        h3 {
+
+            font-size: 2em;
+            text-align: center;
+
+        }
+
+        h4 {
+
+            font-size: 1.4em;
+            padding: .5em;
+            text-align: center;
+            color: var(--main-offwhite-color);
+            background-color: var(--main-midtone-color);
+
+        }
+
+        p.info {
+
+            font-size: .9em;
+            padding: 2em;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            text-align: center;
+            width: 60%;
+            color: var(--main-offwhite-color);
+            background-color: var(--main-midtone-color);
+
+        }
+
+        .cover-img {
+
+            max-width: 100%;
+            display: flex;
+            overflow: hidden;
+            margin-bottom: 1em;
+
+        }
+
+        .cover-img > img {
+
+            max-width: 100%;
+            position: absolute;          
+
+        }
+
+        .cover-img > h1 {
+
+            position: relative;
+
+        }
+
+        #strike {
+
+            text-decoration: line-through;
+
+        }
+
+/*NAVIGATION BAR*/
+        nav,
+        nav ul,
+        nav ul a,
+        nav ul a li {
+
+            background-color: var(--main-midtone-color);
+            color: var(--main-offwhite-color);
+            text-align: center;
+
+        }
+
+        nav ul a {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+        }
+
+        nav ul a li {
+
+            display: block;
+
+            padding: 1em;
+            font-size: larger;
+            list-style: none;
+            width: 6.8em;
+
+            border-radius: 10px;
+
+            transition: background-color 250ms, color 500ms;
+
+        }
+
+        nav ul a li:hover {
+
+            background-color: var(--main-accent-color);
+            color: var(--main-dark-color);
+
+        }
+
+/*ORDER & CONTACT FORM*/
+
+        form {
+
+            width: 80%;
+
+        }
+
+        input {
+
+            padding: 1em;
+            margin: .5em;
+            font-size: 1.2em;
+
+            min-width: 6.1em;
+
+            border-radius: 10px;
+            border: none;
+
+            color: var(--main-dark-color);
+            background-color: var(--main-offwhite-color);
+
+            transition: 500ms;
+
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+
+            -webkit-appearance: none;
+            margin: 0;
+
+        }
+
+        input[type=reset] {
+
+            background-color: var(--main-dark-color);
+            color: var(--main-offwhite-color);
+
+        }
+
+        input[type=reset]:hover {
+
+            background-color: var(--secondary-accent-color);
+
+        }
+
+        input[type=submit] {
+
+            background-color: var(--main-offwhite-color)
+
+        }
+
+        input[type=submit]:hover {
+
+            background-color: var(--main-accent-color);
+
+        }
+
+        input[type=number] {
+
+            -moz-appearance: textfield;
+
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+
+            opacity: 0;
+            position: fixed;
+            width: 0;
+
+        }
+
+        label, label {
+
+            display: inline-block;
+            border: 2px solid var(--main-offwhite-color);
+            border-radius: 5px;
+            text-align: center;
+            padding: .5em;
+            margin: 0 2em 1em 2em;
+
+            transition: 500ms;
+
+        }
+
+        input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+
+            background-color: var(--main-accent-color);
+            color: var(--main-dark-color);
+
+        }
+
+        input[type="radio"]:hover + label, input[type="checkbox"]:hover + label {
+
+            background-color: var(--main-accent-color);
+            color: var(--main-dark-color);
+
+        }
+
+        input[name="add1"], input[name="add2"] {
+
+            width: 100%;
+
+        }
+
+        input::placeholder, textarea::placeholder {
+
+            color: var(--main-midtone-color);
+            font-style: italic;
+            font-size: .8em;
+
+        }
+
+        input:focus, textarea.comment:focus {
+
+            background-color: var(--main-midtone-color);
+            color: var(--main-offwhite-color);
+
+        }
+
+        select {
+
+            border: 2px solid var(--main-offwhite-color);
+            border-radius: 5px;
+            text-align: center;
+            color: var(--main-offwhite-color);
+            background-color: var(--main-midtone-color);
+
+        }
+
+        div.newRow {
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        div.newRow > :not(input.address){
+
+            width: 50%;
+
+        }
+
+        textarea.comment {
+
+            border: 1px solid var(--main-offwhite-color);
+            border-radius: 5px;
+            background-color: var(--main-offwhite-color);
+            color: var(--main-dark-color);
+            padding: 1em;
+
+            height: 4em;
+
+            transition: 500ms;
+
+        }

@@ -21,6 +21,7 @@ body {
         background-position: right,center;
     }
 }
+
 /* TEXT */
 * {
     font-family: Lato, sans-serif;
@@ -128,40 +129,11 @@ p {
     padding-bottom: 1vw;
 }
 
-.cards {
-  display: flex;
-}
-
-.card {
-    flex: 1;
-    background-color: white;
-    color: #4A245E;
-}
-
-#getNewQuote {
-    margin-top: 5vw;
+.card-text {
     font-size: 2vw;
-    border: 5px #4A245E solid;
-    border-radius: 1vw;
-    padding: 1vw;
-    background-color: #4A245E;
-    color: white;
-
-    animation: 500ms;
-}
-
-#getNewQuote:hover {
-    background-color: white;
-    color: #4A245E;
-    border: 5px #4A245E solid;
-}
-
-#person {
-    padding: 1vw;
 }
 
 @media (max-width: 991px) {
-
     h1 {
         font-size: 12vw;
     }
@@ -174,6 +146,10 @@ p {
         font-size: 6vw;
     }
 
+    h4 {
+      font-size: 4vw;
+    }
+
     p, .nav-link, .nav-link > .nav-item {
         font-size: 3vw;
     }
@@ -181,5 +157,15 @@ p {
     .nav-link > .nav-item {
         font-weight: bold;
     }
+}
 
+/*Buttons*/
+.btn {
+  background-color: #4A245E;
+  border: none;
+  transition: background-color 300ms;
+}
+
+.btn:hover {
+  background-color: #673283;
 }
