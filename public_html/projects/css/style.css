@@ -159,6 +159,11 @@ input {
   font-size: 1.2em;
 }
 
+.filter-buttons {
+  float: right;
+  width: 40%;
+}
+
 .search {
   padding: 1vw;
   background-color: var(--main-dark-color);
@@ -194,6 +199,8 @@ input[type="radio"]:hover + label {
 
 .panels {
   overflow: hidden;
+  float: right;
+  width: 40%;
 }
 
 .panel {

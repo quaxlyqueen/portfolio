@@ -9,7 +9,7 @@
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Josh Ashton</a>
+        <a class="navbar-brand" href="..">Josh Ashton</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -18,12 +18,39 @@
                 <a class="nav-link" href="../projects">
                     <li class="nav-item">Projects</li>
                 </a>
+
+                <a class="nav-link" href="../about.html">
+                    <li class="nav-item">About</li>
+                </a>
+
+                <a class="nav-link" href="../contact.html">
+                    <li class="nav-item">Contact</li>
+                </a>
             </ul>
         </div>
     </nav>
 
     <!--Wrapper div, to separate filter options from the rest of the projects.-->
     <div class="projects-display">
+
+      <!--Display panel to show screenshots carousel for the currently selected project.-->
+      <div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/dnd/dnd1.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/graph-visualizer/graph1.png" alt="Second slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+
       <form class="filter-buttons">
           <input type="radio" class="search btn btn-primary" name="filter" id="java" />
           <label for="java">Java</label>
@@ -45,12 +72,13 @@
 
           <input type="radio" class="search btn btn-primary" name="filter" id="bash" />
           <label for="bash">Bash</label>
-      </form>
 
+          <input type="text" class="search input-box" />
+      </form>
       <!--Selectable projects that dynamically resize to fit more information.-->
       <div class="panels">
 
-        <div class="panel java" id="dnd">
+        <div class="panel java open open-active" id="dnd">
           <h3 class="label">DnD</h3> <!--Project label-->
           <h4 class="label-text">ASDF</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/dnd" target="_blank">View Code on Github</a></button>
@@ -90,18 +118,6 @@
           <h3 class="label">Scripts</h3> <!--Project label-->
           <h4 class="label-text">ASDF</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/scripts" target="_blank">View Code on Github</a></button>
-        </div>
-
-        <div class="panel c" id="linkedlist-c">
-          <h3 class="label">Linked List in C</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
-          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/learningC" target="_blank">View Code on Github</a></button>
-        </div>
-
-        <div class="panel html css javascript" id="1430">
-          <h3 class="label">CSIS 1430</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
-          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/1430" target="_blank">View Code on Github</a></button>
         </div>
 
       </div>
