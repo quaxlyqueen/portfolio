@@ -1,0 +1,48 @@
+body {
+
+margin: auto;
+position: relative;
+
+background-color: #4A245E;
+font-family: Lato sans-serif;
+color: white;
+
+text-align: center;
+
+}
+
+h1 {
+
+padding: 25px;
+font-size: 5em;
+
+}
+
+div {
+
+display: inline-block;
+margin: auto;
+width: 50%;
+
+}
+
+button {
+
+background-color: white;
+color: #4A245E;
+border: none;
+padding: 25px;
+text-decoration: none;
+font-size: 1.5em;
+font-family: Lato sans-serif;
+display: inline-block;
+
+}
+
+p {
+
+padding : 25px;
+font-size: 2em;
+display: inline-block;
+
+}

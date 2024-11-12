@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Mad Libs</title>
+
+  </head>
+
+  <body>
+
+    <h1>Mad Libs!</h1>
+
+    <h4>Leave boxes blank for random words when you click submit!</h4>
+
+    <form>
+
+      <input type="text" name="noun1" placeholder="Noun">
+      <input type="text" name="noun2" placeholder="Noun">
+
+      <input type="text" name="pronoun1" placeholder="Pronoun">
+      <input type="text" name="pronoun2" placeholder="Pronoun">
+
+      <input type="text" name="verb1" placeholder="Verb">
+      <input type="text" name="verb2" placeholder="Verb">
+
+      <input type="text" name="adj1" placeholder="Adjective">
+      <input type="text" name="adj2" placeholder="Adjective">
+
+      <input type="text" name="adv1" placeholder="Adverb">
+      <input type="text" name="adv2" placeholder="Adverb">
+
+      <input type="text" name="prep1" placeholder="Preposition">
+      <input type="text" name="prep2" placeholder="Preposition">
+
+      <input type="text" name="con1" placeholder="Conjunction">
+      <input type="text" name="con2" placeholder="Conjunction">
+
+      <input type="text" name="inter1" placeholder="Interjection">
+      <input type="text" name="inter2" placeholder="Interjection">
+
+      <input type="button" value="Submit" id="submit" onclick="generateStory()">
+      <input type="button" value="Clear" id="refresh" onclick="clearAndSet()">
+
+    </form>
+
+
+    <p id="output"></p>
+
+
+  </body>
+
+  <footer>
+
+    <script src="js/script.js"></script>
+
+  </footer>
+
+</html>

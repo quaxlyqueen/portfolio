@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" lang="en">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Order</title>
+</head>
+
+<body>
+
+	<nav>
+
+		<ul>
+
+			<a href="index.html">
+				<li>Ashton Pizzeria</li>
+			</a>
+			<a href="contact.html">
+				<li>Contact Us</li>
+			</a>
+			<a href="about.html">
+				<li>About</li>
+			</a>
+			<a href="order.html">
+				<li id="spotlight">Order Now!</li>
+			</a>
+
+		</ul>
+
+	</nav>
+
+	<div class="cover-img">
+		<img src="img/fresh-veggies.jpg">
+		<h1>Order</h1>
+	</div>
+
+	<main>
+		
+		<h3>Every pizza, made from scratch</h3>
+
+		<p class="info">Here at Ashton Pizzeria, we take tremendous pride in our award-winning pizza. 
+				Every pizza is hand-made with fresh, all-natural ingredients, 
+					and is cooking in our brick oven within 25 minutes of receiving an order.
+				With our free delivery service, you'll have your dream pizza within 40 minutes of placing an order.
+
+		</p>
+
+		<form action="https://www.stonecoldprofessor.com/pizza-order.php" method="post">
+
+			<h3>About You</h3>
+			<br>
+
+			<div class="newRow">
+				<input class="info" type="text" name="first" placeholder="First Name" required>
+				<input class="info" type="text" name="last" placeholder="Last Name" required>
+			</div>
+
+			<div class="newRow">
+				<input class="address info" type="text" name="add1" placeholder="Address 1" required>
+			</div>
+
+			<div class="newRow">
+				<input class="address info" type="text" name="add2" placeholder="Address 2">
+			</div>
+
+			<div class="newRow">
+				<input class="info" type="text" name="city" placeholder="City" required>
+				<select class="info" name="state" required>
+					<option value="AL">AL</option>
+					<option value="AK">AK</option>
+					<option value="AR">AR</option>
+					<option value="AZ">AZ</option>
+					<option value="CA">CA</option>
+					<option value="CO">CO</option>
+					<option value="CT">CT</option>
+					<option value="DC">DC</option>
+					<option value="DE">DE</option>
+					<option value="FL">FL</option>
+					<option value="GA">GA</option>
+					<option value="HI">HI</option>
+					<option value="IA">IA</option>
+					<option value="ID">ID</option>
+					<option value="IL">IL</option>
+					<option value="IN">IN</option>
+					<option value="KS">KS</option>
+					<option value="KY">KY</option>
+					<option value="LA">LA</option>
+					<option value="MA">MA</option>
+					<option value="MD">MD</option>
+					<option value="ME">ME</option>
+					<option value="MI">MI</option>
+					<option value="MN">MN</option>
+					<option value="MO">MO</option>
+					<option value="MS">MS</option>
+					<option value="MT">MT</option>
+					<option value="NC">NC</option>
+					<option value="NE">NE</option>
+					<option value="NH">NH</option>
+					<option value="NJ">NJ</option>
+					<option value="NM">NM</option>
+					<option value="NV">NV</option>
+					<option value="NY">NY</option>
+					<option value="ND">ND</option>
+					<option value="OH">OH</option>
+					<option value="OK">OK</option>
+					<option value="OR">OR</option>
+					<option value="PA">PA</option>
+					<option value="RI">RI</option>
+					<option value="SC">SC</option>
+					<option value="SD">SD</option>
+					<option value="TN">TN</option>
+					<option value="TX">TX</option>
+					<option value="UT">UT</option>
+					<option value="VT">VT</option>
+					<option value="VA">VA</option>
+					<option value="WA">WA</option>
+					<option value="WI">WI</option>
+					<option value="WV">WV</option>
+					<option value="WY">WY</option>
+				</select>
+				<input class="info" type="number" name="zip" placeholder="Zip" required>
+			</div>
+
+			<div class="newRow">
+				<input class="info" type="number" name="phone" placeholder="Phone Number">
+				<input class="info" type="email" name="email" placeholder="Email Address" required>
+			</div>
+
+			<br>
+			<h2>About your pizza</h2>
+			<br>
+
+	<!-- Radio options to choose pizza size, 10 options available. -->
+			<br>
+			<h4>SIZE</h4>
+			<br>
+
+			<div class="newRow">
+
+				<input id="XXS" type="radio" name="size" value="Extra Extra-Small">
+					<label for="XXS">ExtraExtra-Small | 6"</label><br>
+				<input id="XS" type="radio" name="size" value="Extra-Small">
+					<label for="XS">Extra-Small | 10"</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="S" type="radio" name="size" value="Small">
+					<label for="S">Small | 12"</label><br>
+				<input id="M" type="radio" name="size" value="Medium">
+					<label for="M">Medium | 14"</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="L" type="radio" name="size" value="Large">
+					<label for="L">Large | 16"</label><br>
+				<input id="XL" type="radio" name="size" value="Extra-Large">
+					<label for="XL">Extra-Large | 20"</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="XXL" type="radio" name="size" value="Extra Extra-Large">
+					<label for="XXL">ExtraExtra-Large | 24"</label><br>
+				<input id="XXXL" type="radio" name="size" value="Triple X-Large">
+					<label for="XXXL">Triple-Large | 30"</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="XXXXL" type="radio" name="size" value="Quadro-Large">
+					<label for="XXXXL">Quadro-Large | 36"</label><br>
+				<input id="XXXXXL" type="radio" name="size" value="Quinti-Large">
+					<label for="XXXXXL">Quinti-Large | 50"</label><br>
+
+			</div>
+
+	<!-- Radio options for crust selection, 10 options available. Drop-down does not make sense for either the size or crust, so the dropdown was implemented for the customer's state selection. -->
+			<br>
+			<h4>CRUST</h4>
+			<br>
+
+			<div class="newRow">
+
+				<input id="pan" type="radio" name="crust" value="pan">
+					<label for="pan">Pan</label><br>
+				<input id="thin" type="radio" name="crust" value="thin">
+					<label for="thin">Thin</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="deep" type="radio" name="crust" value="deep">
+					<label for="deep">Deep Dish</label><br>
+				<input id="neo" type="radio" name="crust" value="neo">
+					<label for="neo">Neopolitan</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="flat" type="radio" name="crust" value="flatbread">
+					<label for="flat">Flat Bread</label><br>
+				<input id="cracker" type="radio" name="crust" value="cracker">
+					<label for="cracker">Cracker</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="baconWrap" type="radio" name="crust" value="baconWrap">
+					<label for="baconWrap">Bacon-wrapped</label><br>
+				<input id="garlicCrust" type="radio" name="crust" value="garlicCrust">
+					<label for="garlicCrust">Garlic</label><br>
+
+			</div>
+
+			<div class="newRow">
+
+				<input id="stuffed" type="radio" name="crust" value="stuffed">
+					<label for="stuffed">Stuffed</label><br>
+				<input id="gluten-free" type="radio" name="crust" value="gluten-free">
+					<label for="gluten-free">Gluten-Free</label><br>
+
+			</div>
+
+	<!-- Toppings covers four areas: meats, greens, sauces, and cheeses. 
+				Meats, greens, and cheeses are checkbox options (ie. multiple can be selected at once) while the selection of sauce is a radio option (only one selection allowed).
+				34 toppings options available.-->
+			<br>
+			<h2>Toppings</h2>
+			<br>
+
+	<!-- MEATS -->
+			<br>
+			<h4>MEATS</h4>
+			<br>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="baconBits" value="Bacon Bits">
+					<label for="baconBits">Bacon Bits</label>
+				<input type="checkbox" name="toppings[]" id="ham" value="Ham">
+					<label for="ham">Ham</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="sausageHot" value="Hot Sausage">
+					<label for="sausageHot">Hot Sausage</label>
+				<input type="checkbox" name="toppings[]" id="baconStrips" value="Bacon Strips">
+					<label for="baconStrips">Bacon Strips</label>
+
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="chicken" value="Chicken">
+					<label for="chicken">Chicken</label>
+				
+				<input type="checkbox" name="toppings[]" id="beef" value="Beef">
+					<label for="beef">Ground Beef</label>
+				
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="pep" value="Pepperoni">
+					<label for="pep">Pepperoni</label>
+				<input type="checkbox" name="toppings[]" id="sausageMild" value="Mild Sausage">
+					<label for="sausageMild">Mild Sausage</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="steak" value="Steak">
+					<label for="steak">Steak</label>
+				<input type="checkbox" name="toppings[]" id="anchovies" value="Anchovies">
+					<label for="anchovies">Anchovies</label>
+
+			</div>
+
+	<!-- VEGETABLES -->
+
+			<br>
+			<h4>GREENS</h4>
+			<br>
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="tomatoes" value="Tomatoes">
+					<label for="tomatoes">Tomatoes</label>
+				<input type="checkbox" name="toppings[]" id="sunTomatoes" value="Sun-Dried Tomatoes">
+					<label for="sunTomatoes">Sun-Dried Tomatoes</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="olivesBlack" value="Black Olives">
+					<label for="olivesBlack">Black Olives</label>
+				<input type="checkbox" name="toppings[]" id="olivesGreen" value="Green Olives">
+					<label for="olivesGreen">Olives Green</label>
+
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="spinach" value="Spinach">
+					<label for="spinach">Spinach</label>
+				<input type="checkbox" name="toppings[]" id="broccoli" value="Broccoli">
+					<label for="broccoli">Broccoli</label>
+
+			</div>
+
+			<div class="newRow">
+						
+				<input type="checkbox" name="toppings[]" id="pepperRed" value="Red Peppers">
+					<label for="pepperRed">Roasted Red Peppers</label>
+				<input type="checkbox" name="toppings[]" id="pepperGreen" value="Green Peppers">
+					<label for="pepperGreen">Green Peppers</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="pepperBanana" value="Bananna Peppers">
+					<label for="pepperBanana">Banana Peppers</label>
+				<input type="checkbox" name="toppings[]" id="jalepenos" value="Jalepenos">
+					<label for="jalepenos">Jalepenos</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="pineapple" value="Pineapple">
+					<label for="pineapple">Pineapple</label>
+				<input type="checkbox" name="toppings[]" id="mushrooms" value="Mushrooms">
+					<label for="mushrooms">Mushrooms</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="onion" value="Onion">
+					<label for="onion">Onion</label>
+				<input type="checkbox" name="toppings[]" id="avacado" value="Avacado">
+					<label for="avacado">Avacado</label>
+
+			</div>
+
+	<!-- SAUCES -->
+
+			<br>
+			<h4>SAUCES</h4>
+			<br>
+
+			<div class="newRow">
+
+				<input type="radio" name="toppings[]" id="marinara" value="marinara">
+					<label for="marinara">Marinara</label>
+				<input type="radio" name="toppings[]" id="ranch" value="ranch">
+					<label for="ranch">Ranch</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="radio" name="toppings[]" id="alfredo" value="alfredo">
+					<label for="alfredo">Alfredo</label>
+				<input type="radio" name="toppings[]" id="sauceBBQ" value="sauceBBQ">
+					<label for="sauceBBQ">Barbeque</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="radio" name="toppings[]" id="pesto" value="pesto">
+					<label for="pesto">Pesto</label>
+				<input type="radio" name="toppings[]" id="whiteGarlic" value="whiteGarlic">
+					<label for="whiteGarlic">White Garlic</label>
+
+			</div>
+
+	<!-- CHEESES -->
+
+			<br>
+			<h4>CHEESE</h4>
+			<br>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="ricotta" value="ricotta">
+					<label for="ricotta">Ricotta</label>
+				<input type="checkbox" name="toppings[]" id="feta" value="feta">
+					<label for="feta">Feta</label>
+
+			</div>
+
+			<div class="newRow">
+
+				<input type="checkbox" name="toppings[]" id="blue" value="blue">
+					<label for="blue">Blue Cheese</label>
+				<input type="checkbox" name="toppings[]" id="provolone" value="provolone">
+					<label for="provolone">Provolone</label>
+
+			</div>
+
+			<br>
+
+			<div class="newRow">
+
+				<textarea class="comment" name="comments" placeholder="Anything else? Let us know!"></textarea>
+
+			</div>
+
+			<br>
+
+			<div class="newRow">
+
+				<input type="reset" name="reset" id="reset">
+				<input type="submit" name="submit" id="submit">
+
+			</div>
+
+		</form>
+
+	</main>
+
+</body>
+
+</html>

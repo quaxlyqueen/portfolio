@@ -1,4 +1,4 @@
-module joshashton.dev/portfolio
+module joshashton.dev/live
 
 go 1.23.2
 
