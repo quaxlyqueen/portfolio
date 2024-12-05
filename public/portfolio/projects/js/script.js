@@ -41,7 +41,7 @@ function toggleActive(e) {
     let currentActive = document.querySelector('.open-active');
     if(currentActive !== null && currentActive !== this) currentActive.classList.toggle('open-active');
     this.classList.toggle('open-active');
-    updateCarousel(e);
+    //updateCarousel(e);
   }
 }
 

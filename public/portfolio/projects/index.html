@@ -25,9 +25,6 @@
     <!--Wrapper div, to separate filter options from the rest of the projects.-->
     <div class="projects-display">
       <form class="filter-buttons">
-          <input type="radio" class="search btn btn-primary" name="filter" id="java" />
-          <label for="java">Java</label>
-
           <input type="radio" class="search btn btn-primary" name="filter" id="html" />
           <label for="html">HTML</label>
 
@@ -37,11 +34,20 @@
           <input type="radio" class="search btn btn-primary" name="filter" id="javascript" />
           <label for="javascript">JavaScript</label>
 
+          <input type="radio" class="search btn btn-primary" name="filter" id="java" />
+          <label for="java">Java</label>
+
           <input type="radio" class="search btn btn-primary" name="filter" id="c" />
           <label for="c">C</label>
 
           <input type="radio" class="search btn btn-primary" name="filter" id="c#" />
           <label for="c#">C#</label>
+
+          <input type="radio" class="search btn btn-primary" name="filter" id="go" />
+          <label for="go">Go</label>
+
+          <input type="radio" class="search btn btn-primary" name="filter" id="flutter" />
+          <label for="flutter">Flutter</label>
 
           <input type="radio" class="search btn btn-primary" name="filter" id="bash" />
           <label for="bash">Bash</label>
@@ -49,59 +55,46 @@
 
       <!--Selectable projects that dynamically resize to fit more information.-->
       <div class="panels">
+        <div class="panel go flutter" id="tbn">
+          <h3 class="label">One AI</h3>
+          <h4 class="label-text">End-to-end self-hosted AI solution using Ollama, a Go backend, and Flutter frontend.</h4>
+          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/one-ai" target="_blank">View Code on Github</a></button>
+        </div>
+
+        <div class="panel go flutter" id="pokedex">
+          <h3 class="label">Pokedex</h3>
+          <h4 class="label-text">End-to-end self-hosted Pokedex using PokeAPI, a Go backend, and Flutter frontend.</h4>
+          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/pokedex" target="_blank">View Code on Github</a></button>
+        </div>
 
         <div class="panel java" id="dnd">
-          <h3 class="label">DnD</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
+          <h3 class="label">D&D</h3> <!--Project label-->
+          <h4 class="label-text">Java application for creating Dungeons and Dragons characters.</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/dnd" target="_blank">View Code on Github</a></button>
         </div>
 
         <div class="panel java" id="graph">
           <h3 class="label">Graph</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
+          <h4 class="label-text">A graph algorithm visualizer.</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/2420-graph-visualizer" target="_blank">View Code on Github</a></button>
         </div>
 
         <div class="panel java" id="chess">
           <h3 class="label">Chess</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
+          <h4 class="label-text">A simple chess application with move validation.</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/2420-chess" target="_blank">View Code on Github</a></button>
         </div>
 
         <div class="panel c# .NET" id="snake">
           <h3 class="label">Snake</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
+          <h4 class="label-text">A CLI snake game with random obstacle generation.</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/2410-snake" target="_blank">View Code on Github</a></button>
         </div>
 
         <div class="panel c# .NET" id="contacts">
           <h3 class="label">Contacts</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
+          <h4 class="label-text">A CLI contacts application for consolidating, merging, and exporting contacts between different formats.</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/2410-contacts" target="_blank">View Code on Github</a></button>
-        </div>
-
-        <div class="panel html css js javascript" id="canvas">
-          <h3 class="label">Canvas</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
-          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/dnd" target="_blank">View Code on Github</a></button>
-        </div>
-
-        <div class="panel bash" id="scripts">
-          <h3 class="label">Scripts</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
-          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/scripts" target="_blank">View Code on Github</a></button>
-        </div>
-
-        <div class="panel c" id="linkedlist-c">
-          <h3 class="label">Linked List in C</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
-          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/learningC" target="_blank">View Code on Github</a></button>
-        </div>
-
-        <div class="panel html css javascript" id="1430">
-          <h3 class="label">CSIS 1430</h3> <!--Project label-->
-          <h4 class="label-text">ASDF</h4>
-          <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/1430" target="_blank">View Code on Github</a></button>
         </div>
 
       </div>
