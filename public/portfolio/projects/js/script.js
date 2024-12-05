@@ -7,6 +7,15 @@ const panels = [...document.querySelectorAll('.panel')];
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 
+// Store the reference to the carousel container where images will be displayed
+const carouselContainer = document.querySelector('.carousel-inner');
+
+
+// Add event listeners to the panels (cards)
+//const panels = [...document.querySelectorAll('.panel')];
+//panels.forEach(panel => panel.addEventListener('click', toggleActive));
+
+
 // buttons to filter projects
 const searchButtons = document.querySelectorAll('.search');
   // add event listeners to each button
@@ -41,15 +50,30 @@ function toggleActive(e) {
     let currentActive = document.querySelector('.open-active');
     if(currentActive !== null && currentActive !== this) currentActive.classList.toggle('open-active');
     this.classList.toggle('open-active');
-    //updateCarousel(e);
+    currentActive = document.querySelector('.open-active');
+    updateCarousel(currentActive);
   }
 }
 
-/*
- * Update the carousel to use the selected project's screenshot folder.
- */
-function updateCarousel(e) {
-  console.log(e.target.id); // TODO: Need to implement.
+// Function to update the carousel with the selected project's images
+function updateCarousel(panel) {
+  console.log(panel);
+  // Get the image URLs from the data attribute of the selected project
+  const imageUrls = JSON.parse(panel.getAttribute('data-carousel-images'));
+
+  // Clear the current carousel content
+  carouselContainer.innerHTML = '';
+
+  // Add new images to the carousel
+  imageUrls.forEach((url, index) => {
+    const isActive = index === 0 ? 'active' : ''; // The first image should be active
+    const carouselItem = `
+      <div class="carousel-item ${isActive}">
+        <img src="${url}" class="d-block w-100" alt="...">
+      </div>
+    `;
+    carouselContainer.innerHTML += carouselItem; // Add the new image item to the carousel
+  });
 }
 
  /* 

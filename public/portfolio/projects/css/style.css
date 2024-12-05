@@ -85,6 +85,11 @@ p {
 
 .label-text {
   font-size: 1.5vw;
+  max-width: 80%; /* Limit the width of the description */
+  text-align: center;
+  --white-space: nowrap; /* Optional: prevent text from wrapping to multiple lines */
+  --overflow: hidden; /* Hide overflow text */
+  --text-overflow: ellipsis;
 }
 
 /* NAV-BAR */
@@ -193,7 +198,8 @@ input[type="radio"]:hover + label {
 }
 
 .panels {
-  overflow: hidden;
+  flex: 1;
+  --overflow: hidden;
 }
 
 .panel {
@@ -222,14 +228,14 @@ input[type="radio"]:hover + label {
 }
 
 .panel > *:nth-child(2) {
-  transform: translateX(1000%);
+  transform: translateX(-1000%);
 }
 .panel.open-active > *:nth-child(2) {
-  transform: translateX(0%);
+  transform: translateX(12.5%);
 }
 
 .panel > *:last-child {
-  transform: translateX(1000%);
+  transform: translateX(-1000%);
   transition: 800ms;
 }
 .panel.open-active > *:last-child {
@@ -253,6 +259,16 @@ input[type="radio"]:hover + label {
   font-size: 2em;
 }
 
+.carousel-wrapper {
+  flex: 0 0 40%;
+  padding-top: 5vw;
+}
+
+/* Optional: You can adjust the width of the carousel */
+.carousel {
+  width: 100%; /* Ensure the carousel takes up all the space in its wrapper */
+}
+
 @media only screen and (max-width: 600px) {
   .panel p {
     font-size: 0.8em;
@@ -261,6 +277,9 @@ input[type="radio"]:hover + label {
 
 /*Projects display wrapper div*/
 .projects-display {
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
   padding: 5vw;
 }
 

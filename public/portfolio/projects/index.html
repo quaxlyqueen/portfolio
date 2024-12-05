@@ -7,61 +7,62 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Josh Ashton</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav nav-fill w-100">
-                <a class="nav-link" href="../projects">
-                    <li class="nav-item">Projects</li>
-                </a>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="index.html">Josh Ashton</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-fill w-100">
+          <a class="nav-link" href="..">
+            <li class="nav-item">Projects</li>
+          </a>
+        </ul>
+      </div>
     </nav>
 
-    <!--Wrapper div, to separate filter options from the rest of the projects.-->
+    <!-- Wrapper for the panels and carousel -->
     <div class="projects-display">
-      <form class="filter-buttons">
-          <input type="radio" class="search btn btn-primary" name="filter" id="html" />
-          <label for="html">HTML</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="css" />
-          <label for="css">CSS</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="javascript" />
-          <label for="javascript">JavaScript</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="java" />
-          <label for="java">Java</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="c" />
-          <label for="c">C</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="c#" />
-          <label for="c#">C#</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="go" />
-          <label for="go">Go</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="flutter" />
-          <label for="flutter">Flutter</label>
-
-          <input type="radio" class="search btn btn-primary" name="filter" id="bash" />
-          <label for="bash">Bash</label>
-      </form>
-
-      <!--Selectable projects that dynamically resize to fit more information.-->
+      <!-- Project panels -->
       <div class="panels">
-        <div class="panel go flutter" id="tbn">
+        <form class="filter-buttons">
+            <input type="radio" class="search btn btn-primary" name="filter" id="html" />
+            <label for="html">HTML</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="css" />
+            <label for="css">CSS</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="javascript" />
+            <label for="javascript">JavaScript</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="java" />
+            <label for="java">Java</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="c" />
+            <label for="c">C</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="c#" />
+            <label for="c#">C#</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="go" />
+            <label for="go">Go</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="flutter" />
+            <label for="flutter">Flutter</label>
+
+            <input type="radio" class="search btn btn-primary" name="filter" id="bash" />
+            <label for="bash">Bash</label>
+
+        </form>
+
+        <!-- Project panels (cards) here -->
+        <div class="panel go flutter" id="one-ai" data-carousel-images='["img/one-ai-1.jpg", "img/one-ai-3.jpg"]'>
           <h3 class="label">One AI</h3>
           <h4 class="label-text">End-to-end self-hosted AI solution using Ollama, a Go backend, and Flutter frontend.</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/one-ai" target="_blank">View Code on Github</a></button>
         </div>
 
-        <div class="panel go flutter" id="pokedex">
+        <div class="panel go flutter" id="pokedex" data-carousel-images='["img/pokedex-2.jpeg", "img/pokedex-3.jpeg"]'>
           <h3 class="label">Pokedex</h3>
           <h4 class="label-text">End-to-end self-hosted Pokedex using PokeAPI, a Go backend, and Flutter frontend.</h4>
           <button type="button" class="btn btn-primary"><a href="https://github.com/quaxlyqueen/pokedex" target="_blank">View Code on Github</a></button>
@@ -99,10 +100,26 @@
 
       </div>
 
+      <!-- Carousel placed to the right -->
+      <div class="carousel-wrapper">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Dynamic images will be injected here -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
     </div>
-  </body>
 
-  <footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-  </footer>
+  </body>
 </html>
