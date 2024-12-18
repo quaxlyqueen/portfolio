@@ -9,12 +9,20 @@ export default function FeaturedContent( {content} ) {
   return (
     <>
       <div className="row">
-        {content[0]}
-        {content[1]}
+        <div className="col">
+          {content[0]}
+        </div>
+        <div className="col">
+          {content[1]}
+        </div>
       </div>
       <div className="row">
-        {content[2]}
-        {content[3]}
+        <div className="col">
+          {content[2]}
+        </div>
+        <div className="col">
+          {content[3]}
+        </div>
       </div>
     </>
   );

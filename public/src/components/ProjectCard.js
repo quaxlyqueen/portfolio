@@ -11,12 +11,12 @@
 export default function ProjectCard( {img, title, description, url} ) {
   return (
     <>
-      <div>
-        <img src={img} />
-        <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <a target="_blank" href={url}>View Code on GitHub</a>
+      <div className="card">
+        <img className="card-img-top" src={img} alt="TODO: Image caption."/>
+        <div className="card-body">
+          <h2 className="card-title dark-text">{title}</h2>
+          <p className="dark-text">{description}</p>
+          <a className = "btn btn-primary" target="_blank" href={url}>View Code on GitHub</a>
         </div>
       </div>
     </>

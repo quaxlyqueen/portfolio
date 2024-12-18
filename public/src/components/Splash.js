@@ -9,9 +9,9 @@
 export default function Splash( { primaryText, secondaryText }) {
   return (
     <>
-      <div>
-        <h1>{primaryText}</h1>
-        <h2>{secondaryText}</h2>
+      <div className="custom-container" id="splash">
+        <h1 className="light-text">{primaryText}</h1>
+        <h2 className="light-text">{secondaryText}</h2>
       </div>
     </>
   );
