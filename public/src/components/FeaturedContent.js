@@ -16,14 +16,6 @@ export default function FeaturedContent( {content} ) {
           {content[1]}
         </div>
       </div>
-      <div className="row">
-        <div className="col">
-          {content[2]}
-        </div>
-        <div className="col">
-          {content[3]}
-        </div>
-      </div>
     </>
   );
 }

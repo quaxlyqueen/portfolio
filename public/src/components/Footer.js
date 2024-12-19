@@ -11,7 +11,7 @@ import { FaThreadsIn } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footer-container">
         <div className="row">
           <div className="col-md-6">
             <p>&copy; {new Date().getFullYear()} Josh Ashton</p>

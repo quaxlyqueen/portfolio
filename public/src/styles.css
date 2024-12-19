@@ -306,31 +306,6 @@ input[type="radio"]:hover + label {
     font-size: 2vw;
 }
 
-@media (max-width: 991px) {
-    h1 {
-        font-size: 12vw;
-    }
-
-    h2 {
-        font-size: 8vw;
-    }
-
-    h3, .navbar-brand {
-        font-size: 6vw;
-    }
-
-    h4 {
-      font-size: 4vw;
-    }
-
-    p, .nav-link, .nav-link > .nav-item {
-        font-size: 3vw;
-    }
-
-    .nav-link > .nav-item {
-        font-weight: bold;
-    }
-}
 
 /*Buttons*/
 .btn {
@@ -349,6 +324,12 @@ input[type="radio"]:hover + label {
 .btn > a {
     text-decoration: none;
     color: var(--main-offwhite-color);
+}
+
+.footer-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80% !important;
 }
 
 .social-links {
@@ -382,6 +363,14 @@ input[type="radio"]:hover + label {
   .project-grid > * {
     flex: 0 0 30%; /* Set a fixed width for each project */
   }
+
+  .footer-container .social-links {
+    width: 80% !important;
+    margin: 0;
+    padding-left: 0; /* Remove any left padding on mobile */
+    padding-right: 0; /* Remove any right padding on mobile */
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) { /* Medium Screens (2 columns) */
@@ -391,6 +380,13 @@ input[type="radio"]:hover + label {
 
   .project-grid > * {
     flex: 0 0 40%; /* Set a fixed width for each project */
+  }
+
+  .footer-container .social-links {
+    width: 80% !important;
+    margin: 0;
+    padding-left: 0; /* Remove any left padding on mobile */
+    padding-right: 0; /* Remove any right padding on mobile */
   }
 }
 
@@ -402,4 +398,41 @@ input[type="radio"]:hover + label {
   .project-grid > * {
     flex: 1 1 80%; /* Set full width for each project */
   }
+
+  .footer-container .social-links {
+    width: 80% !important;
+    margin: 0;
+    padding-left: 0; /* Remove any left padding on mobile */
+    padding-right: 0; /* Remove any right padding on mobile */
+  }
+
+  .social-links li a {
+      font-size: 2vw;
+  }
+}
+
+@media (max-width: 991px) {
+    h1 {
+        font-size: 12vw;
+    }
+
+    h2 {
+        font-size: 8vw;
+    }
+
+    h3, .navbar-brand {
+        font-size: 6vw;
+    }
+
+    h4 {
+      font-size: 4vw;
+    }
+
+    p, .nav-link, .nav-link > .nav-item {
+        font-size: 3vw;
+    }
+
+    .nav-link > .nav-item {
+        font-weight: bold;
+    }
 }
