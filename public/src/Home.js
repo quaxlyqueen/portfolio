@@ -4,11 +4,22 @@ import ProjectCard from './components/ProjectCard';
 import Footer from './components/Footer';
 import FeaturedContent from './components/FeaturedContent';
 
-export default function Home() {
-  const projectCards = [
-    <ProjectCard img="./assets/img/dnd.png" name="D&D" description="Dungeons and Dragons character builder app, developed in Java." url="https://github.com/quaxlyqueen/dnd"/>,
-    <ProjectCard img="./assets/img/graph.png" name="Graph Visualizer" description="Interactive representation of a graph data structure, developed in Java." url="https://github.com/quaxlyqueen/2420-graph-visualizer"/>,
-  ];
+export default function Home( {projects} ) {
+  const projectCards = projects.map((project) => {
+    // Create a new ProjectCard object for each project in the 'projects' array
+    return (
+      <ProjectCard
+        key={project.id} // Add a unique key for each ProjectCard
+        frontend={project.frontend}
+        backend={project.backend}
+        id={project.id}
+        name={project.name}
+        description={project.description}
+        url={project.url}
+        img={project.img}
+      />
+    );
+  });
   return (
     <>
       <Navigation />

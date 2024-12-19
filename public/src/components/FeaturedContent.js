@@ -8,7 +8,7 @@
 export default function FeaturedContent( {content} ) {
   return (
     <>
-      <div className="row">
+      <div className="row flex-row">
         <div className="col">
           {content[0]}
         </div>

@@ -306,6 +306,16 @@ input[type="radio"]:hover + label {
     font-size: 2vw;
 }
 
+.flex-row {
+  display: flex; /* Enable flexbox layout */
+  height: 100%; /* Set the height of the container */
+}
+
+.flex-row > .col {
+  display: flex; 
+  flex-direction: column; /* Ensure content flows vertically */
+  height: 100%; /* Make each column fill the container's height */
+}
 
 /*Buttons*/
 .btn {
@@ -409,6 +419,25 @@ input[type="radio"]:hover + label {
   .social-links li a {
       font-size: 2vw;
   }
+    h1 {
+        font-size: 8vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    h3, .navbar-brand {
+        font-size: 5vw;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    p, .nav-link, .nav-link > .nav-item {
+        font-size: 2vw;
+    }
 }
 
 @media (max-width: 991px) {

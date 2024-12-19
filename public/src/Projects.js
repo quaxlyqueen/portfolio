@@ -4,49 +4,30 @@ import ProjectCard from './components/ProjectCard';
 
 /*
  * The Projects page.
+ *
+ * @param String[] projects "An array of attributes, frontend, backend, id, name, description, url, img, and imgCaption"
  */
-export default function Projects() {
-  /*
-   * An array of project data to feed to the ProjectDisplay component.
-     {
-        frontend: "",
-        backend: "",
-        id: "",
-        name: "",
-        description: "",
-        url: "",
-        img: ""
-     },
-   */
-  const data = [
-     {
-        frontend: "java",
-        backend: "",
-        id: "dnd",
-        name: "D&D",
-        description: "Dungeons and Dragons character builder app, developed in Java.",
-        url: "https://github.com/quaxlyqueen/dnd",
-        img: "/assets/img/dnd.png"
-     },
-     {
-        frontend: "java",
-        backend: "",
-        id: "graph",
-        name: "Graph Visualizer",
-        description: "Interactive representation of a graph data structure, developed in Java.",
-        url: "https://github.com/quaxlyqueen/2420-graph-visualizer",
-        img: "/assets/img/graph.png"
-     },
-  ];
-
-  let i = 0;
+export default function Projects( {projects} ) {
+   const projectCards = projects.map((project) => {
+      // Create a new ProjectCard object for each project in the 'projects' array
+      return (
+         <ProjectCard
+         key={project.id} // Add a unique key for each ProjectCard
+         frontend={project.frontend}
+         backend={project.backend}
+         id={project.id}
+         name={project.name}
+         description={project.description}
+         url={project.url}
+         img={project.img}
+         />
+      );
+   });
   return (
     <>
       <Navigation />
         <div className="project-grid">
-          {data.map(item => (
-            <ProjectCard frontend={item.frontend} backend={item.backend} id={item.id} name={item.name} description={item.description} url={item.url} img={item.img} />
-          ))}
+            {projectCards}
         </div>
       <Footer />
     </>

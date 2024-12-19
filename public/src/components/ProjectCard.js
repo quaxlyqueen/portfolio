@@ -9,9 +9,10 @@
  * @param String url "The URL for the repository of the project."
  * @param String img "Path to an image."
  * @param String imgCaption "Accessibile caption for the image."
+ *
+ * TODO: Add project keys.
  */
 export default function ProjectCard( {frontend, backend, id, name, description, url, img, imgCaption} ) {
-  console.log(img);
   return (
     <>
       <div className={`card ${frontend} ${backend}`}>

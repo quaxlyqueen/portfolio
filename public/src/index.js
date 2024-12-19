@@ -14,11 +14,57 @@ import Resume from "./Resume";
 
 const root = document.getElementById("root");
 
+/*
+ * TEMPLATE:
+ {
+    frontend: "",
+    backend: "",
+    id: "",
+    name: "",
+    description: "",
+    url: "",
+    img: "",
+    imgCaption: ""
+ },
+ */
+const projects = [
+  {
+    frontend: "java",
+    backend: "",
+    id: "graph",
+    name: "Graph",
+    description: "Interactive representation of a graph data structure, developed in Java.",
+    url: "https://github.com/quaxlyqueen/2420-graph-visualizer",
+    img: "/assets/img/graph.png",
+    imgCaption: "A screenshot of my graph data structure visualizer application."
+  },
+  {
+    frontend: "flutter",
+    backend: "go",
+    id: "one-ai",
+    name: "OneAI",
+    description: "An end-to-end deployment wrapper for Meta's Ollama.",
+    url: "https://github.com/quaxlyqueen/one-ai",
+    img: "/assets/img/one-ai.png",
+    imgCaption: "A screenshot of a conversation with a self-hosted artificial intelligence."
+  },
+  {
+    frontend: "java",
+    backend: "",
+    id: "dnd",
+    name: "D&D",
+    description: "A Dungeons and Dragons character builder app, developed in Java.",
+    url: "https://github.com/quaxlyqueen/dnd",
+    img: "/assets/img/dnd.png",
+    imgCaption: "A screenshot of my Dungeons and Dragons character builder application."
+  },
+];
+
 ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/projects" element={<Projects />} />
+      <Route path="/" element={<Home projects={projects} />} />
+      <Route path="/projects" element={<Projects projects={projects} />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
