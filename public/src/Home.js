@@ -6,8 +6,8 @@ import FeaturedContent from './components/FeaturedContent';
 
 export default function Home() {
   const projectCards = [
-    <ProjectCard img="./assets/img/dnd.png" title="D&D" description="ASDF" url="https://github.com/quaxlyqueen/dnd"/>,
-    <ProjectCard img="./assets/img/graph.png" title="Graph Visualizer" description="ASDF" url="https://github.com/quaxlyqueen/2420-graph-visualizer"/>,
+    <ProjectCard img="./assets/img/dnd.png" name="D&D" description="Dungeons and Dragons character builder app, developed in Java." url="https://github.com/quaxlyqueen/dnd"/>,
+    <ProjectCard img="./assets/img/graph.png" name="Graph Visualizer" description="Interactive representation of a graph data structure, developed in Java." url="https://github.com/quaxlyqueen/2420-graph-visualizer"/>,
   ];
   return (
     <>

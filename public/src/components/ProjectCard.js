@@ -1,20 +1,23 @@
 /*
  * Create a ProjectCard.
  *
+ * @param String frontend "The frontend framework/library used for the project. Used for sorting/filtering."
+ * @param String backend "The backend framework/library used for the project. Used for sorting/filtering."
+ * @param String id "Lowercase string representation of the project name."
+ * @param String name "The name of the project."
+ * @param String description "A description of the project."
+ * @param String url "The URL for the repository of the project."
  * @param String img "Path to an image."
- * @param String title "Title of the card."
- * @param String description "A short description for the card."
- * @param String url "URL to a project."
- *
- * TODO: Need to add classes and styling.
+ * @param String imgCaption "Accessibile caption for the image."
  */
-export default function ProjectCard( {img, title, description, url} ) {
+export default function ProjectCard( {frontend, backend, id, name, description, url, img, imgCaption} ) {
+  console.log(img);
   return (
     <>
-      <div className="card">
-        <img className="card-img-top" src={img} alt="TODO: Image caption."/>
+      <div className={`card ${frontend} ${backend}`}>
+        <img className="card-img-top" src={img} alt={imgCaption}/>
         <div className="card-body">
-          <h2 className="card-title dark-text">{title}</h2>
+          <h2 className="card-title dark-text">{name}</h2>
           <p className="dark-text">{description}</p>
           <a className = "btn btn-primary" target="_blank" href={url}>View Code on GitHub</a>
         </div>
