@@ -11,6 +11,7 @@ import Contact from "./Contact";
 import About from "./About";
 import Blog from "./Blog";
 import Resume from "./Resume";
+import PageNotFound from "./PageNotFound";
 
 const root = document.getElementById("root");
 
@@ -33,7 +34,7 @@ const projects = [
     backend: "",
     id: "graph",
     name: "Graph",
-    description: "Interactive representation of a graph data structure, developed in Java.",
+    description: "Interactive representation of a graph data structure.",
     url: "https://github.com/quaxlyqueen/2420-graph-visualizer",
     img: "/assets/img/graph.png",
     imgCaption: "A screenshot of my graph data structure visualizer application."
@@ -53,7 +54,7 @@ const projects = [
     backend: "",
     id: "dnd",
     name: "D&D",
-    description: "A Dungeons and Dragons character builder app, developed in Java.",
+    description: "A Dungeons and Dragons character builder app.",
     url: "https://github.com/quaxlyqueen/dnd",
     img: "/assets/img/dnd.png",
     imgCaption: "A screenshot of my Dungeons and Dragons character builder application."
@@ -63,12 +64,16 @@ const projects = [
 ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home projects={projects} />} />
-      <Route path="/projects" element={<Projects projects={projects} />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/resume" element={<Resume />} />
+      <Route exact path="/" element={<Home projects={projects} />} />
+      <Route exact path="/projects" element={<Projects projects={projects} />} />
+      <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/about" element={<About />} />
+      <Route exact path="/blog" element={<Blog />} />
+      <Route exact path="/resume" element={<Resume />} />
+      <Route
+        path="*"
+        element={<PageNotFound />}
+      />
     </Routes>
   </BrowserRouter>
 );
