@@ -4,16 +4,16 @@ import { Mousewheel, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "../styles.css";
+import "../main.css";
 
-export default function VerticalSlider({ slideData }) {
+export default function VerticalSlider({ slides }) {
   return (
     <>
       <Swiper
         modules={[Mousewheel, Pagination]}
         direction={"vertical"}
         speed={800}
-        loop={true}
+        loop={false}
         pagination={{
           clickable: true,
         }}
@@ -22,23 +22,9 @@ export default function VerticalSlider({ slideData }) {
           sensitivity: 1,
         }}
       >
-        {slideData.map((slide, index) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            {({ isActive }) => (
-              <div className="slide-container">
-                <div className="info">
-                  <h1 data-color={slide.color}>{slide.title}</h1>
-                  <p>{slide.description}</p>
-                </div>
-                <div className="item">
-                  <div
-                    className={`circle ${isActive ? "animated-circle" : ""}`}
-                    data-item={slide.color}
-                  ></div>
-                  <img src={slide.image} alt={slide.alt} />
-                </div>
-              </div>
-            )}
+            {({ isActive }) => <div className="slide-container">{slide}</div>}
           </SwiperSlide>
         ))}
       </Swiper>
