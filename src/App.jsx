@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import VerticalSlider from "./components/VerticalSlider";
 import Primary from "./Primary";
 import Skills from "./Skills";
@@ -12,9 +12,38 @@ import "./main.css";
  * TODO: Read in data from a plain text file for easier editing in the future.
  */
 export default function App() {
-  const cards = [<ProjectCard />, <ProjectCard />, <ProjectCard />];
+  // FUNCTION DATA
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 790);
 
-  const skills = {
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 790);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const initState = isMobile ? [true, false, false] : [true, true, true];
+
+  // DATA VARIABLES
+  /*
+   {
+    title: "",
+    description: "",
+    image: "",
+    imageGallery: null,
+    url: ""
+   },
+*/
+  const projectData = [
+    {
+      title: "One AI",
+      description: "ASDF",
+      image: "/images/projects/one-ai.png",
+      imageGallery: null,
+      url: "https://github.com/quaxlyqueen/one-ai",
+    },
+  ];
+
+  const skillsData = {
     languages: ["Java", "JavaScript", "Go", "Dart", "Python", "C#"],
     tools: [
       "Git & GitHub",
@@ -40,11 +69,10 @@ export default function App() {
       secondaryText="Junior full-stack developer."
       callToAction="Here's my resume."
       image="/images/profile.jpg"
-      skills={skills}
+      skills={skillsData}
+      initState={initState}
     />,
-    <Projects cards={cards} />,
-    <Contact />,
-    <About />,
+    <Projects cardData={projectData} />,
   ];
   return <VerticalSlider slides={slides} />;
 }

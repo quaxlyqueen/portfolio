@@ -1,4 +1,4 @@
-// TODO: Replace h4 callToAction with a button callToAction.
+// TODO: Replace h4 callToAction with a GREEN button callToAction.
 import React, { useState } from "react";
 import SkillCard from "./components/SkillCard";
 
@@ -8,6 +8,7 @@ export default function Primary({
   callToAction,
   image,
   skills,
+  initState,
 }) {
   return (
     <>
@@ -28,19 +29,19 @@ export default function Primary({
               header="Languages"
               symbol="code"
               list={skills.languages}
-              initState={true}
+              initState={initState[0]}
             />
             <SkillCard
               header="Tools"
               symbol="terminal"
               list={skills.tools}
-              initState={false}
+              initState={initState[1]}
             />
             <SkillCard
               header="Other"
               symbol="hub"
               list={skills.other}
-              initState={false}
+              initState={initState[2]}
             />
           </div>
         </div>

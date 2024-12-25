@@ -51,6 +51,12 @@ body {
   overflow: hidden;
 }
 
+.slide-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .swiper-pagination-bullet {
   width: 18px;
   height: 18px;
@@ -71,6 +77,55 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: 40% 50% 10%;
   column-gap: 1vh;
+}
+
+#project-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5vw;
+}
+
+.project-grid-container {
+  margin: 2vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1% 90%;
+  row-gap: 2vh;
+}
+
+.project-card {
+  background-color: #ebd2ff;
+  height: 70%;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 100%;
+  column-gap: 20vw;
+}
+
+.project-text {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 70%;
+  align-text: left;
+}
+
+.project-text h3 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#project-cards-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #header {
