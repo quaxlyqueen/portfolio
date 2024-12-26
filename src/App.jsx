@@ -36,7 +36,17 @@ export default function App() {
   const projectData = [
     {
       title: "One AI",
-      description: "ASDF",
+      descriptionA:
+        "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter, for its write once, build anywhere ideology. Here are some of the implemented features:",
+      featureList: [
+        "user authentication",
+        "AES encryption",
+        "SHA-256 hashing",
+        "file uploads in Base64",
+        "dynamic LLM routing",
+        "user configuration",
+        "configuration files",
+      ],
       image: "/images/one-ai-cropped.png",
       imageGallery: null,
       url: "https://github.com/quaxlyqueen/one-ai",

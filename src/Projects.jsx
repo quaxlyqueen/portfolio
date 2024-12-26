@@ -19,7 +19,8 @@ export default function Projects({ cardData }) {
             {cardData.map((c) => (
               <ProjectCard
                 title={c.title}
-                description={c.description}
+                descriptionA={c.descriptionA}
+                featureList={c.featureList}
                 image={c.image}
                 imageGallery={c.imageGallery}
                 url={c.url}
