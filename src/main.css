@@ -105,11 +105,14 @@ body {
   column-gap: 20vw;
 }
 
+.project-card img {
+  height: 100%;
+}
+
 .project-text {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 20% 70%;
-  align-text: left;
 }
 
 .project-text h3 {
@@ -445,7 +448,6 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 30% 30% 30%;
     column-gap: 0;
-    padding: 30px;
   }
 
   .card {

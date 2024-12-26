@@ -15,7 +15,9 @@ export default function ProjectCard({
       <div className="project-text">
         <div className="row">
           <h3 className="project-header">{title}</h3>
-          <FontAwesomeIcon icon={faGithub} />
+          <a href={url} target="_blank">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
         </div>
         <p>{description}</p>
       </div>

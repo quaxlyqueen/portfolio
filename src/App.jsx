@@ -37,7 +37,7 @@ export default function App() {
     {
       title: "One AI",
       description: "ASDF",
-      image: "/images/projects/one-ai.png",
+      image: "/images/one-ai-cropped.png",
       imageGallery: null,
       url: "https://github.com/quaxlyqueen/one-ai",
     },
