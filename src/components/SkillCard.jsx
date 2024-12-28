@@ -10,7 +10,7 @@ export default function SkillCard({ header, symbol, list, initState }) {
   };
 
   return (
-    <div className="card">
+    <div className="card shadow">
       <div className="skill-section-header" onClick={toggleExpansion}>
         <span className="material-icons skill-symbol">{symbol}</span>
         <h3>{header}</h3>

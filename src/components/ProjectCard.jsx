@@ -13,21 +13,22 @@ export default function ProjectCard({
   return (
     <div className="project-card">
       <div className="img-container">
-        <img src={image} />
+        <img src={image} className="shadow" />
       </div>
-      <div className="project-text-column">
+      <div className="project-text-column shadow">
         <div className="project-text">
-          <h3 className="project-header">{title}</h3>
+          <h3>{title}</h3>
           <p>{descriptionA}</p>
           <ul className="feature-list">
             {featureList.map((item) => (
               <li>{item}</li>
             ))}
           </ul>
-          <a className="view-button-link button" href={url} target="_blank">
-            View on GitHub
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
+          <div className="row">
+            <a className="button" href={url} target="_blank">
+              <div className="button-grid">View on GitHub</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
