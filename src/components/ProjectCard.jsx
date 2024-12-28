@@ -19,19 +19,15 @@ export default function ProjectCard({
         <div className="project-text">
           <h3 className="project-header">{title}</h3>
           <p>{descriptionA}</p>
-          <div className="row">
-            <ul className="feature-list">
-              {featureList.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="button">
-            <a className="view-button-link" href={url} target="_blank">
-              View on GitHub
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </div>
+          <ul className="feature-list">
+            {featureList.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+          <a className="view-button-link button" href={url} target="_blank">
+            View on GitHub
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
         </div>
       </div>
     </div>

@@ -5,16 +5,8 @@ export default function Projects({ cardData }) {
   return (
     <>
       <div id="project-container">
-        <div className="project-grid-container">
-          <div id="project-header">
-            <h2 className="project-header">Projects</h2>
-
-            <p>
-              Here are some projects of mine. Lorem ipsum odor amet,
-              consectetuer adipiscing elit. Purus molestie vel ornare volutpat
-              elit et per montes. Lacus fames diam a non taciti sem.
-            </p>
-          </div>
+        <div id="project-grid-container">
+          <h1>Projects</h1>
           <div id="project-cards-section">
             {cardData.map((c) => (
               <ProjectCard
