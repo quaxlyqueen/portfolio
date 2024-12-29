@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Scrollbar, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
+import "swiper/css/scrollbar";
 
 export default function Projects({ cardData }) {
   return (
@@ -21,7 +22,7 @@ export default function Projects({ cardData }) {
               thresholdDelta: 50,
               sensitivity: 1,
             }}
-            scrollbar={{ hide: false }}
+            scrollbar={{ hide: false, el: ".swiper-slide" }}
           >
             {cardData.map((c, index) => (
               <SwiperSlide key={index}>
