@@ -20,8 +20,8 @@ export default function ProjectCard({
           <h3>{title}</h3>
           <p>{descriptionA}</p>
           <ul className="feature-list">
-            {featureList.map((item) => (
-              <li>{item}</li>
+            {featureList.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ul>
           <div className="row">

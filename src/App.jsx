@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import VerticalSlider from "./components/VerticalSlider";
 import Primary from "./Primary";
-import Skills from "./Skills";
 import Projects from "./Projects";
-import Contact from "./Contact";
-import About from "./About";
-import ProjectCard from "./components/ProjectCard";
 import "./main.css";
+import { terminal } from "virtual:terminal";
 
 /**
  * TODO: Read in data from a plain text file for easier editing in the future.
@@ -16,12 +13,19 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 790);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 790);
+    const handleResize = () => {
+      const mediaQuery = window.matchMedia("(max-width: 790px)");
+      setIsMobile(mediaQuery.matches);
+    };
+
+    handleResize(); // Initial check on mount
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const initState = isMobile ? [true, false, false] : [true, true, true];
+  terminal.log("isMobile: " + isMobile);
 
   // DATA VARIABLES
   /*
@@ -37,7 +41,7 @@ export default function App() {
     {
       title: "One AI",
       descriptionA:
-        "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter for its write once, build anywhere ideology. Here are some of the implemented features:",
+        "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter. Here are some of the implemented features:",
       featureList: [
         "user authentication",
         "AES encryption",
@@ -97,5 +101,6 @@ export default function App() {
     />,
     <Projects cardData={projectData} />,
   ];
+
   return <VerticalSlider slides={slides} />;
 }

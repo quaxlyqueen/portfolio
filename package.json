@@ -10,7 +10,8 @@
     "swiper": "^10.0.0"
   },
   "devDependencies": {
-    "vite": "^4.0.4"
+    "vite": "^4.0.4",
+    "vite-plugin-terminal": "^1.2.0"
   },
   "name": "portfolio",
   "version": "0.0.1",
