@@ -37,7 +37,7 @@ export default function App() {
     {
       title: "One AI",
       descriptionA:
-        "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter, for its write once, build anywhere ideology. Here are some of the implemented features:",
+        "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter for its write once, build anywhere ideology. Here are some of the implemented features:",
       featureList: [
         "user authentication",
         "AES encryption",
@@ -45,11 +45,24 @@ export default function App() {
         "file uploads in Base64",
         "dynamic LLM routing",
         "user configuration",
-        "configuration files",
       ],
       image: "/images/one-ai-cropped.png",
       imageGallery: null,
       url: "https://github.com/quaxlyqueen/one-ai",
+    },
+    {
+      title: "D&D Character Builder",
+      descriptionA:
+        "A Dungeons and Dragons character builder, following the 5th edition rules and creation process. A collaborative project creating a GUI in Java with Swing. Features include:",
+      featureList: [
+        "serializing data into custom filetype",
+        "image import",
+        "export to PDF",
+        "button hover effects",
+      ],
+      image: "/images/dnd.png",
+      imageGallery: null,
+      url: "https://github.com/quaxlyqueen/dnd",
     },
   ];
 
