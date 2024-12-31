@@ -146,11 +146,12 @@ h4 {
 
 /**PRIMARY PAGE**/
 #primary {
+  margin-top: 4vh;
   display: grid;
   height: 100vh;
   grid-template-columns: 100%;
-  grid-template-rows: 40% 50% 10%;
-  column-gap: 1vh;
+  grid-template-rows: 40% 40% 10%;
+  column-gap: 10vh;
 }
 
 #header {
