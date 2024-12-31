@@ -18,9 +18,9 @@ Week 1: 17/12/24 - 23/12/24 (Planning for the future)
 
 Bug Fixes:
 
-- [ ] Breathing animation of background gradient stopped.
-- [ ] Add state to skill accordions for mobile.
-- [ ] Alignment of project card on mobile.
+- [x] Breathing animation of background gradient stopped.
+- [x] Add state to skill accordions for mobile.
+- [x] Alignment of project card on mobile.
 - [ ] Profile picture animation is slightly cutoff on mobile.
 
 Week 2: 24/12/24 - 30/12/24 (Adding key information)

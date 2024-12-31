@@ -23,8 +23,8 @@
 
 body {
   margin: 0;
+  height: 100vh;
   position: relative;
-  height: 100%;
   background: linear-gradient(
     135deg,
     #84509f 0%,
@@ -32,7 +32,10 @@ body {
     #39124e 61%,
     #170123 100%
   );
-  animation: background-fade 1s linear infinite;
+  background-size:
+    300% 100%,
+    cover;
+  animation: background-fade 4s linear infinite;
   animation-direction: alternate;
   background-attachment: fixed;
 }
@@ -69,10 +72,7 @@ h4 {
   font-size: 5vw;
   color: #ebd2ff;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .shadow {
@@ -101,14 +101,14 @@ h4 {
 
 /**ACTIVE PAGE ANIMATIONS**/
 .swiper-slide-active #header,
-.swiper-slide-active #skills-section,
+.swiper-slide-active #skill-cards,
 .swiper-slide-active #project-section,
 .swiper-slide-active #project-cards-section {
   opacity: 0;
 }
 
 .swiper-slide-active #header,
-.swiper-slide-active #skills-section,
+.swiper-slide-active #skill-cards,
 .swiper-slide-active #project-section,
 .swiper-slide-active #project-cards-section,
 .down-indicator {
@@ -121,7 +121,7 @@ h4 {
   animation-delay: 0.2s;
 }
 
-.swiper-slide-active #skills-section,
+.swiper-slide-active #skills-cards,
 .swiper-slide-active #project-cards-section {
   animation-delay: 0.8s;
 }
@@ -195,34 +195,21 @@ h4 {
   animation: imgMoveDown 0.8s ease-in forwards 0.2s;
 }
 
-#skills-section {
+#skills-cards {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.cards {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 100%;
-  column-gap: 2.25vw;
-  justify-content: center;
+  place-items: center;
 }
 
 /**SKILL CARDS**/
 .card {
-  align-items: center;
-  justify-content: center;
   text-align: center;
   background-color: #ebd2ff;
   border-radius: 20px;
-  width: 20vw;
+  min-width: 20vw;
 }
 
-.card .skill-section-header {
+.skill-card-header {
   display: grid;
   grid-template-columns: 20% 60%;
   grid-template-rows: 100%;
@@ -235,11 +222,9 @@ h4 {
   margin: 0;
   background-color: #4a245e;
   border-radius: 18px 18px 0 0;
-
-  width: 100%;
 }
 
-.card .skill-section-header .skill-symbol {
+.skill-symbol {
   font-variation-settings:
     "FILL" 0,
     "wght" 200,
@@ -485,18 +470,17 @@ h4 {
     justify-content: left;
   }
 
-  #skills-section .card .skill-section-header {
+  .skill-card-header {
     border-radius: 18px 18px 18px 18px;
   }
 
   .cards {
     grid-template-columns: 100%;
     grid-template-rows: 30% 30% 30%;
-    column-gap: 0;
   }
 
   .card {
-    width: 50vw;
+    min-width: 50vw;
     margin: 1vw;
   }
 
@@ -535,9 +519,6 @@ h4 {
 
   .project-text-column {
     margin-left: 5vw;
-  }
-
-  .button {
   }
 }
 

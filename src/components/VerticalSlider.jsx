@@ -24,7 +24,7 @@ export default function VerticalSlider({ slides }) {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            {({ isActive }) => <div className="slide-container">{slide}</div>}
+            {<div className="slide-container">{slide}</div>}
           </SwiperSlide>
         ))}
       </Swiper>
