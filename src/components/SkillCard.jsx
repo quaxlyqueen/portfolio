@@ -13,7 +13,7 @@ const SkillCard = ({ header, symbol, list, isActive, onToggle }) => {
         <span className="material-icons skill-symbol">{symbol}</span>
         <h3>{header}</h3>
       </div>
-      {isActive && (
+      {(initState || isActive) && (
         <ul>
           {list.map((item, index) => (
             <li key={index}>{item}</li>
