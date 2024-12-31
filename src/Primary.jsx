@@ -8,9 +8,9 @@ export default function Primary({
   callToAction,
   image,
   skills,
-  initState,
 }) {
-  let [activeCardIndex, setActiveCardIndex] = useState(null);
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
+  () => setActiveCardIndex(0);
   return (
     <>
       <div id="primary">

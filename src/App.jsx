@@ -9,24 +9,6 @@ import { terminal } from "virtual:terminal";
  * TODO: Read in data from a plain text file for easier editing in the future.
  */
 export default function App() {
-  // FUNCTION DATA
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 790);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const mediaQuery = window.matchMedia("(max-width: 790px)");
-      setIsMobile(mediaQuery.matches);
-    };
-
-    handleResize(); // Initial check on mount
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const initState = isMobile ? [true, false, false] : [true, true, true];
-  terminal.log("isMobile: " + isMobile);
-
   // DATA VARIABLES
   /*
    {
@@ -97,7 +79,6 @@ export default function App() {
       callToAction="Here's my resume."
       image="/images/profile.jpg"
       skills={skillsData}
-      initState={initState}
     />,
     <Projects cardData={projectData} />,
   ];
