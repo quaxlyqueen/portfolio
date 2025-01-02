@@ -31,7 +31,6 @@ export default function App() {
         "SHA-256 hashing",
         "file uploads in Base64",
         "dynamic LLM routing",
-        "user configuration",
       ],
       image: "/images/one-ai-cropped.png",
       imageGallery: null,

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /**
  * TODO: Add email validation function.
@@ -29,6 +30,7 @@ export default function Contact() {
       <form onSubmit={handleSubmit}>
         <div className="row">
           <input
+            className="shadow"
             placeholder="Name"
             type="text"
             id="name"
@@ -37,6 +39,7 @@ export default function Contact() {
             onChange={handleChange}
           />
           <input
+            className="shadow"
             placeholder="example@email.com"
             type="email"
             id="email"
@@ -47,6 +50,7 @@ export default function Contact() {
         </div>
         <div className="row">
           <textarea
+            className="shadow"
             placeholder="Message"
             id="message"
             name="message"
@@ -54,9 +58,12 @@ export default function Contact() {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" className="row">
-          Submit
-        </button>
+
+        <div className="row">
+          <button type="submit" className="button shadow">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -109,13 +109,15 @@ h4 {
 #header,
 #skill-cards,
 #project-section,
-#project-cards-section {
+#project-cards-section,
+#contact-section {
   opacity: 0;
 }
 .swiper-slide-active #header,
 .swiper-slide-active #skill-cards,
 .swiper-slide-active #project-section,
-.swiper-slide-active #project-cards-section {
+.swiper-slide-active #project-cards-section,
+.swiper-slide-active #contact-section {
   opacity: 0;
 }
 
@@ -123,6 +125,7 @@ h4 {
 .swiper-slide-active #skill-cards,
 .swiper-slide-active #project-section,
 .swiper-slide-active #project-cards-section,
+.swiper-slide-active #contact-section,
 .down-indicator {
   animation: moveDown 0.8s ease-in forwards;
 }
@@ -170,7 +173,6 @@ h4 {
   display: grid;
   grid-template-columns: 55% 45%;
   grid-template-rows: 100%;
-  column-gap: 2vw;
 }
 
 #header-text {
@@ -209,9 +211,15 @@ h4 {
 }
 
 #skill-cards {
+  border: 1px solid white;
   width: 100%;
-  display: grid;
-  place-items: center;
+}
+
+#card-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /**SKILL CARDS**/
@@ -220,6 +228,8 @@ h4 {
   background-color: #ebd2ff;
   border-radius: 20px;
   min-width: 20vw;
+  max-width: 40vw;
+  margin: 1vw;
 }
 
 .skill-card-header {
@@ -293,6 +303,7 @@ h4 {
   overflow: hidden;
   height: 90%;
   width: 100%;
+  transition-duration: 1s;
 }
 
 .project-card .img-container {
@@ -364,6 +375,8 @@ h4 {
   width: 80%;
   color: #4a245e;
   background-color: #ebd2ff;
+  border: 3px solid #ebd2ff;
+  outline: none;
   border-radius: 18px;
   font-size: clamp(1rem, 1.5vw, 2rem);
 
@@ -373,22 +386,65 @@ h4 {
   align-items: center;
   justify-content: center;
   padding: 1vw;
+
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  background-color: #4a245e;
+  color: #ebd2ff;
 }
 
 /**Contact Section**/
 #contact-section {
   height: 90vh;
   width: 100%;
-  margin: 5vw;
-}
+  margin: 0 5vw 5vw 5vw;
 
-#contact-section h1 {
-  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #contact-section form {
-  border: 1px solid white;
-  height: 70vh;
+  width: 80vw;
+  height: 80%;
+}
+
+#contact-section input,
+#contact-section textarea {
+  width: 100%;
+  padding: 2vw;
+  margin: 2vw;
+  border-radius: 18px;
+  background-color: #ebd2ff;
+  color: #4a245e;
+  outline: none;
+  border: none;
+  font-size: clamp(0.75rem, 1.1rem, 2rem);
+}
+
+#contact-section textarea {
+  min-height: 30vh;
+}
+
+#contact-section input:valid,
+#contact-section textarea:valid {
+  background-color: #ebd2ff;
+}
+
+#contact-section input:focus,
+#contact-section textarea:focus {
+  outline: none;
+  border: none;
+}
+
+#contact-section .button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /**PDF Viewer**/
@@ -516,13 +572,8 @@ h4 {
     border-radius: 18px 18px 18px 18px;
   }
 
-  .cards {
-    grid-template-columns: 100%;
-    grid-template-rows: 30% 30% 30%;
-  }
-
   .card {
-    min-width: 50vw;
+    min-width: 40vw;
     margin: 1vw;
   }
 
@@ -570,6 +621,13 @@ h4 {
 
   .pdf-page {
     width: 100%;
+  }
+
+  #card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 

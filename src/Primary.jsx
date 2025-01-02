@@ -19,27 +19,29 @@ export default function Primary({ primaryText, secondaryText, image, skills }) {
           </div>
         </div>
         <div id="skill-cards">
-          <SkillCard
-            header="Languages"
-            symbol="code"
-            list={skills.languages}
-            isActive={activeCardIndex === 0}
-            onToggle={() => setActiveCardIndex(0)}
-          />
-          <SkillCard
-            header="Tools"
-            symbol="terminal"
-            list={skills.tools}
-            isActive={activeCardIndex === 1}
-            onToggle={() => setActiveCardIndex(1)}
-          />
-          <SkillCard
-            header="Other"
-            symbol="hub"
-            list={skills.other}
-            isActive={activeCardIndex === 2}
-            onToggle={() => setActiveCardIndex(2)}
-          />
+          <div id="card-grid">
+            <SkillCard
+              header="Languages"
+              symbol="code"
+              list={skills.languages}
+              isActive={activeCardIndex === 0}
+              onToggle={() => setActiveCardIndex(0)}
+            />
+            <SkillCard
+              header="Tools"
+              symbol="terminal"
+              list={skills.tools}
+              isActive={activeCardIndex === 1}
+              onToggle={() => setActiveCardIndex(1)}
+            />
+            <SkillCard
+              header="Other"
+              symbol="hub"
+              list={skills.other}
+              isActive={activeCardIndex === 2}
+              onToggle={() => setActiveCardIndex(2)}
+            />
+          </div>
         </div>
         <span className="material-icons down-indicator">
           keyboard_double_arrow_down
