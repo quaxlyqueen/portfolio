@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import VerticalSlider from "./components/VerticalSlider";
 import Primary from "./Primary";
 import Projects from "./Projects";
+import Contact from "./Contact";
 import "./main.css";
 import { terminal } from "virtual:terminal";
 
@@ -81,6 +82,7 @@ export default function App() {
       skills={skillsData}
     />,
     <Projects cardData={projectData} />,
+    <Contact />,
   ];
 
   return <VerticalSlider slides={slides} />;

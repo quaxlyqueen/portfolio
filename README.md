@@ -14,7 +14,7 @@ Week 1: 17/12/24 - 23/12/24 (Planning for the future)
 - [x] Template HTML blocks for repeated components.
 - [ ] Document classes, ID's, and other attributes.
   - [ ] Script to easily add new projects (components).
-- [ ] Embeddable PDFs (research phase).
+- [x] Embeddable PDFs (research phase).
 
 Bug Fixes:
 

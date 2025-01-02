@@ -1,16 +1,8 @@
-// TODO: Replace h4 callToAction with a GREEN button callToAction.
 import React, { useState } from "react";
 import SkillCard from "./components/SkillCard";
 
-export default function Primary({
-  primaryText,
-  secondaryText,
-  callToAction,
-  image,
-  skills,
-}) {
-  const [activeCardIndex, setActiveCardIndex] = useState(null);
-  () => setActiveCardIndex(0);
+export default function Primary({ primaryText, secondaryText, image, skills }) {
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
   return (
     <>
       <div id="primary">
@@ -18,13 +10,15 @@ export default function Primary({
           <div id="header-text">
             <h1>{primaryText}</h1>
             <h3>{secondaryText}</h3>
-            <h4>{callToAction}</h4>
+            <a className="button" href="/resume" target="_blank">
+              <div className="button-grid">Access my resume</div>
+            </a>
           </div>
           <div id="header-image">
             <img id="profile" src={image} />
           </div>
         </div>
-        <div id="skills-cards">
+        <div id="skill-cards">
           <SkillCard
             header="Languages"
             symbol="code"

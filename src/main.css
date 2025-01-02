@@ -87,22 +87,31 @@ h4 {
 
 /**SWIPER PAGES**/
 .swiper {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
 .slide-container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 .mySwiper {
+  width: 100vw;
   height: 100%;
 }
 
 /**ACTIVE PAGE ANIMATIONS**/
+#header,
+#skill-cards,
+#project-section,
+#project-cards-section {
+  opacity: 0;
+}
 .swiper-slide-active #header,
 .swiper-slide-active #skill-cards,
 .swiper-slide-active #project-section,
@@ -159,7 +168,7 @@ h4 {
   overflow: hidden;
 
   display: grid;
-  grid-template-columns: 60% 35%;
+  grid-template-columns: 55% 45%;
   grid-template-rows: 100%;
   column-gap: 2vw;
 }
@@ -199,7 +208,7 @@ h4 {
   animation: imgMoveDown 0.8s ease-in forwards 0.2s;
 }
 
-#skills-cards {
+#skill-cards {
   width: 100%;
   display: grid;
   place-items: center;
@@ -262,6 +271,11 @@ h4 {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 20% 80%;
+}
+
+#project-grid-container h1 {
+  margin-left: 5vw;
+  text-align: left;
 }
 
 #project-cards-section {
@@ -347,14 +361,38 @@ h4 {
 }
 
 .button {
-  height: 100%;
-  width: 50%;
+  width: 80%;
   color: #4a245e;
   background-color: #ebd2ff;
   border-radius: 18px;
   font-size: clamp(1rem, 1.5vw, 2rem);
 
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+}
+
+/**Contact Section**/
+#contact-section {
+  height: 90vh;
+  width: 100%;
+  margin: 5vw;
+}
+
+#contact-section h1 {
+  margin-left: 5vw;
+}
+
+#contact-section form {
+  border: 1px solid white;
+  height: 70vh;
+}
+
+/**PDF Viewer**/
+.pdf-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -523,6 +561,15 @@ h4 {
 
   .project-text-column {
     margin-left: 5vw;
+  }
+
+  .pdf-viewer {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .pdf-page {
+    width: 100%;
   }
 }
 
