@@ -4,7 +4,10 @@ import PdfViewer from "./components/PdfViewer";
 export default function Resume() {
   return (
     <>
-      <PdfViewer file="resume.pdf" />
+      <div id="resume-section">
+        <h1>Resume</h1>
+        <PdfViewer file="resume.pdf" />
+      </div>
     </>
   );
 }
