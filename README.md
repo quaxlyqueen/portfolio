@@ -25,11 +25,12 @@ Bug Fixes:
 
 Week 2: 24/12/24 - 30/12/24 (Adding key information)
 
-- [ ] Resume page (HTML and PDF options).
+- [x] Resume page (HTML and PDF options).
 - [ ] Convert SLCC e-portfolio to my own website
   - [ ] Meet required pages and content
   - [ ] Embed PDF course reflections/signature assignments.
-- [ ] Contact page.
+- [x] Contact page.
+  - [ ] Implement MailTrap for sending me automated emails when there is a contact form submission.
 
 Week 3: 31/12/24 - 6/12/24
 
@@ -41,5 +42,3 @@ Week 3: 31/12/24 - 6/12/24
   - [ ] Separate user for self-hosting, with reduced permissions.
   - [ ] Dockerize
 - [ ] Blog page (stretch goal).
-
-Don't be the person who informs people against their will.

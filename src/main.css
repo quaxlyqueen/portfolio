@@ -63,6 +63,11 @@ h4 {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
+p {
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  color: #ebd2ff;
+}
+
 .material-icons {
   font-variation-settings:
     "FILL" 0,
@@ -191,23 +196,16 @@ h4 {
   align-items: center;
   justify-content: center;
   width: var(--width);
-  aspect-ratio: 1/1;
   margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
 }
 
 #header-image img {
-  display: block;
   width: calc(var(--width) / 2);
   filter: drop-shadow(5px 6px 5px rgba(36, 36, 42, 0.5));
   user-select: none;
   z-index: 1;
-  border-radius: 50%;
-}
-
-#header-image img {
   animation: imgMoveDown 0.8s ease-in forwards 0.2s;
+  border-radius: 50%;
 }
 
 #skill-cards {
@@ -350,8 +348,6 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: clamp(1rem, 1.5rem, 2rem);
-  color: #ebd2ff;
 }
 
 .row {
