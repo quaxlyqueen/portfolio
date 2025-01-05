@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import VerticalSlider from "./components/VerticalSlider";
-import Primary from "./Primary";
+import Home from "./Home";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import "./main.css";
@@ -73,7 +73,7 @@ export default function App() {
   };
 
   const slides = [
-    <Primary
+    <Home
       primaryText="Hi, I'm Josh Ashton."
       secondaryText="Junior full-stack developer."
       callToAction="Here's my resume."

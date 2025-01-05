@@ -18,31 +18,31 @@ export default function PdfViewer({ file }) {
   }
 
   function next() {
-    if (pageNumber < numPages - 1) {
+    if (pageNumber < numPages) {
       setPageNumber(pageNumber + 1);
     }
   }
 
-  console.log("numPages: " + numPages);
-  console.log("pageNumber: " + pageNumber);
-
   return (
     <>
       <div className="pdf-container">
-        <button className="pdf-button shadow" onClick={() => prev()}>
-          <span className="material-icons">arrow_back</span>
-        </button>
         <Document
           file={file}
           onLoadSuccess={({ numPages: numPagesInPdf }) => {
             setNumPages(numPagesInPdf);
           }}
+          className="pdf-document"
         >
           <Page pageNumber={pageNumber} />
         </Document>
-        <button className="pdf-button shadow" onClick={() => next()}>
-          <span className="material-icons">arrow_forward</span>
-        </button>
+        <div className="pdf-buttons shadow">
+          <button className="pdf-button" onClick={() => prev()}>
+            <span className="material-icons">arrow_back</span>
+          </button>
+          <button className="pdf-button" onClick={() => next()}>
+            <span className="material-icons">arrow_forward</span>
+          </button>
+        </div>
       </div>
     </>
   );
