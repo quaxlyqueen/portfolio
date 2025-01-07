@@ -26,10 +26,11 @@ export default function App() {
       descriptionA:
         "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter. Here are some of the implemented features:",
       featureList: [
-        "user authentication",
-        "AES encryption",
-        "SHA-256 hashing",
-        "file uploads in Base64",
+        "Docker container to reliably reproduce and self-host",
+        "AES encryption of messages to/from the server",
+        "SHA-256 hashing for message integrity",
+        "Base64 file encoding for sending files from the client to the server",
+        "responsive chat interface and conversation manager",
       ],
       image: "/images/one-ai-cropped.png",
       imageGallery: null,
