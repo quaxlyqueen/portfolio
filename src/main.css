@@ -319,6 +319,28 @@ p {
   grid-template-rows: 20% 80%;
 }
 
+#projects-header-row {
+  display: flex;
+}
+
+#projects-nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  margin-right: 5vw;
+}
+
+.slider-nav-button {
+  margin: 2vw;
+  transition-duration: 500ms;
+}
+
+#projects-header-row div span {
+  color: var(--accent-2);
+}
+
 #project-grid-container h1 {
   margin-left: 5vw;
   text-align: left;
@@ -328,6 +350,26 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Tooltip container */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--dark-0);
+  color: var(--text);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
 }
 
 /**PROJECT CARDS**/

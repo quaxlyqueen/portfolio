@@ -1,28 +1,57 @@
-import React from "react";
+import React, { useRef } from "react";
 import ProjectCard from "./components/ProjectCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Scrollbar, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Navigation, Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/scrollbar";
 
 export default function Projects({ cardData }) {
+  const projectSwiperRef = useRef(null);
+
+  const prevSlide = () => {
+    if (projectSwiperRef.current) {
+      projectSwiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const nextSlide = () => {
+    if (projectSwiperRef.current) {
+      projectSwiperRef.current.swiper.slideNext();
+    }
+  };
+
   return (
     <>
       <div id="project-section">
         <div id="project-grid-container">
-          <h1>Projects</h1>
+          <div id="projects-header-row">
+            <h1>Projects</h1>
+            <div id="projects-nav-buttons">
+              <div className="slider-nav-button shadow tooltip" onClick={prevSlide}>
+                <span className="material-icons">
+                  chevron_left
+                </span>
+                <span className="tooltip-text">Previous Project</span>
+              </div>
+
+              <div className="slider-nav-button shadow tooltip" onClick={nextSlide}>
+                <span className="material-icons">
+                  chevron_right
+                </span>
+                <span className="tooltip-text">Next Project</span>
+              </div>
+            </div>
+          </div>
           <Swiper
-            modules={[Scrollbar, Mousewheel, Pagination]}
-            slidesPerView={1}
+            modules={[Navigation, Scrollbar]}
+            navigation
+            slidesPerView={1.2}
             loop={false}
             id="project-cards-section"
             className="mySwiper"
-            mousewheel={{
-              thresholdDelta: 50,
-              sensitivity: 1,
-            }}
             scrollbar={{ hide: false, el: ".swiper-slide" }}
+            ref={projectSwiperRef}
           >
             {cardData.map((c, index) => (
               <SwiperSlide key={index}>
@@ -38,7 +67,7 @@ export default function Projects({ cardData }) {
             ))}
           </Swiper>
         </div>
-      </div>
+      </div >
     </>
   );
 }
