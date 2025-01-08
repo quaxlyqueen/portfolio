@@ -873,7 +873,9 @@ p {
     border-radius: 10px;
   }
 
-  .down-indicator {}
+  #projects-nav-buttons {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 485px) {
