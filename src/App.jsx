@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import VerticalSlider from "./components/VerticalSlider";
 import Home from "./Home";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import "./main.css";
-import { terminal } from "virtual:terminal";
 
 /**
  * TODO: Read in data from a plain text file for easier editing in the future.
@@ -14,7 +13,10 @@ export default function App() {
   /*
    {
     title: "",
-    description: "",
+    descriptionA: "",
+    featureList: [
+
+    ],
     image: "",
     imageGallery: null,
     url: ""
@@ -26,10 +28,10 @@ export default function App() {
       descriptionA:
         "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter. Here are some of the implemented features:",
       featureList: [
-        "user authentication",
-        "AES encryption",
-        "SHA-256 hashing",
-        "file uploads in Base64",
+        "AES encryption of messages between client and server",
+        "SHA-256 hashing for message validation",
+        "Base64 encoding for file uploads to the server",
+        "Docker container for isolation and security",
       ],
       image: "/images/one-ai-cropped.png",
       imageGallery: null,
@@ -42,12 +44,40 @@ export default function App() {
       featureList: [
         "basic pseudo-randomized obstacle generation",
         "difficulty selection by adjusting the frequency of obstacle generation",
-        "keyboard input",
-        "ASCII art",
+        "keyboard input to move the snake",
+        "ASCII art for the menu and game over state",
       ],
       image: "/images/snake.gif",
       imageGallery: null,
       url: "https://github.com/quaxlyqueen/2410-Snake",
+    },
+    {
+      title: "Battery Monitor",
+      descriptionA:
+        "A battery monitor, written in C with a GUI written in Python. Utilizes the acpi Unix command to gather battery information. Implemented features incldue:",
+      featureList: [
+        "embed Unix commands in C to get the date, time, battery percentage, and battery status",
+        "basic file I/O to store historical battery data",
+        "daemonize to run as a background process",
+        "script to install as a SystemD service",
+        "basic Python GUI in TKinter to provide graph of data",
+      ],
+      image: "/images/battery-mon.png",
+      imageGallery: null,
+      url: "https://github.com/quaxlyqueen/battery-mon",
+    },
+    {
+      title: "D&D Character Builder",
+      descriptionA:
+        "A Dungeons and Dragons character builder, following the 5th edition rules and creation process. A collaborative project creating a GUI in Java with Swing. Features include:",
+      featureList: [
+        "serialization of character data into custom filetype",
+        "global styling and custom font import",
+        "button hover effects",
+      ],
+      image: "/images/dnd.png",
+      imageGallery: null,
+      url: "https://github.com/quaxlyqueen/dnd",
     },
     {
       title: "Calculator",
@@ -62,24 +92,17 @@ export default function App() {
       imageGallery: null,
       url: "https://github.com/quaxlyqueen/calculator",
     },
-    {
-      title: "D&D Character Builder",
-      descriptionA:
-        "A Dungeons and Dragons character builder, following the 5th edition rules and creation process. A collaborative project creating a GUI in Java with Swing. Features include:",
-      featureList: [
-        "serialization of character data into custom filetype",
-        "image import",
-        "export to PDF",
-        "button hover effects",
-      ],
-      image: "/images/dnd.png",
-      imageGallery: null,
-      url: "https://github.com/quaxlyqueen/dnd",
-    },
   ];
 
   const skillsData = {
-    languages: ["Java", "JavaScript", "Go", "Dart", "Python", "C#"],
+    languages: [
+      "C & C#",
+      "HTML & CSS",
+      "Go",
+      "Java",
+      "JavaScript & Dart",
+      "Python",
+    ],
     tools: [
       "Git & GitHub",
       "Docker & Kubernetes",

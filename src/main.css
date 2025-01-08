@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-/*
-#EBD2FF
-#c69bca
-#9e75a8
-#4a245e
-*/
-
 /**GLOBAL**/
 :root {
   --width: 480px;
+  --dark-0: #170123;
+  --dark-1: #39124e;
+  --dark-2: #5e3276;
+  --dark-3: #84509f;
+  --primary: #4a245e;
+  --text: #EBD2FF;
 }
 
 *,
@@ -25,13 +24,11 @@ body {
   margin: 0;
   position: relative;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    #84509f 0%,
-    #5e3276 39%,
-    #39124e 61%,
-    #170123 100%
-  );
+  background: linear-gradient(135deg,
+      var(--dark-3) 0%,
+      var(--dark-2) 39%,
+      var(--dark-1) 61%,
+      var(--dark-0) 100%);
   background-size:
     300% 100%,
     cover;
@@ -45,12 +42,12 @@ h1 {
   font-weight: 600;
   letter-spacing: 2px;
   width: max-content;
-  color: #ebd2ff;
+  color: var(--text);
 }
 
 h3,
 h4 {
-  color: #ebd2ff;
+  color: var(--text);
   font-weight: 300;
   line-height: 1.5;
 }
@@ -60,7 +57,7 @@ h2 {
   font-weight: 600;
   letter-spacing: 2px;
   width: max-content;
-  color: #ebd2ff;
+  color: var(--text);
 }
 
 h3 {
@@ -73,7 +70,7 @@ h4 {
 
 p {
   font-size: clamp(1rem, 1.5rem, 2rem);
-  color: #ebd2ff;
+  color: var(--text);
 }
 
 .material-icons {
@@ -83,7 +80,7 @@ p {
     "GRAD" 0,
     "opsz" 24;
   font-size: 5vw;
-  color: #ebd2ff;
+  color: var(--text);
 
   display: flex;
   flex-direction: column;
@@ -193,12 +190,13 @@ p {
 
 .swiper-pagination-bullet-active {
   height: 36px;
-  background-color: #ebd2ff;
+  background-color: var(--text);
   border-radius: 14px;
 }
 
 /**PRIMARY PAGE**/
 #primary {
+  width: 100%;
   margin-top: 4vh;
   display: grid;
   height: 100vh;
@@ -208,21 +206,16 @@ p {
 }
 
 .header {
-  width: 100%;
-  overflow: hidden;
-
   display: grid;
-  grid-template-columns: 30% 60%;
+  grid-template-columns: 30% 70%;
   grid-template-rows: 100%;
 }
 
 .header-text {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .header-image {
@@ -231,8 +224,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: var(--width);
-  margin: 0 auto;
+  width: 100%;
 }
 
 .header-image img {
@@ -258,11 +250,13 @@ p {
 /**SKILL CARDS**/
 .card {
   text-align: center;
-  background-color: #ebd2ff;
+  background-color: var(--text);
   border-radius: 20px;
   min-width: 20vw;
   max-width: 50vw;
   margin: 1vw;
+
+  transition-duration: 500ms;
 }
 
 .skill-card-header {
@@ -276,9 +270,10 @@ p {
 
   padding: 1vw 2vw 1vw 2vw;
   margin: 0;
-  background-color: #4a245e;
+  background-color: var(--primary);
   border-radius: 18px 18px 0 0;
 }
+
 .skill-card-header h3 {
   font-size: clamp(1.3rem, 2vw, 3rem);
   text-align: right;
@@ -301,7 +296,7 @@ p {
 .card ul li {
   list-style: none;
   font-size: clamp(1rem, 1.25vw, 1.5rem);
-  color: #4a245e;
+  color: var(--primary);
 }
 
 /**PROJECTS PAGE**/
@@ -363,7 +358,7 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 2vw;
-  background-color: #4a245e;
+  background-color: var(--primary);
   border-radius: 18px;
 }
 
@@ -397,21 +392,21 @@ p {
 .feature-list {
   display: flex;
   flex-direction: column;
-  color: #ebd2ff;
+  color: var(--text);
   height: 100%;
   padding-left: 4vw;
 }
 
 .feature-list li {
   font-size: clamp(1rem, 1.5rem, 2rem);
-  color: #ebd2ff;
+  color: var(--text);
 }
 
 .button {
   width: 80%;
-  color: #4a245e;
-  background-color: #ebd2ff;
-  border: 3px solid #ebd2ff;
+  color: var(--primary);
+  background-color: var(--text);
+  border: 3px solid var(--text);
   outline: none;
   border-radius: 18px;
   font-size: clamp(1rem, 1.5vw, 2rem);
@@ -427,8 +422,8 @@ p {
 }
 
 .button:hover {
-  background-color: #4a245e;
-  color: #ebd2ff;
+  background-color: var(--primary);
+  color: var(--text);
 }
 
 /**Contact Section**/
@@ -454,8 +449,8 @@ p {
   padding: 2vw;
   margin: 2vw;
   border-radius: 18px;
-  background-color: #ebd2ff;
-  color: #4a245e;
+  background-color: var(--text);
+  color: var(--primary);
   outline: none;
   border: none;
   font-size: clamp(0.75rem, 1.1rem, 2rem);
@@ -467,7 +462,7 @@ p {
 
 #contact-section input:valid,
 #contact-section textarea:valid {
-  background-color: #ebd2ff;
+  background-color: var(--text);
 }
 
 #contact-section input:focus,
@@ -512,7 +507,7 @@ p {
 
 .pdf-button {
   width: 100%;
-  background-color: #ebd2ff;
+  background-color: var(--text);
   outline: none;
   border: none;
   padding: 1vw;
@@ -522,15 +517,15 @@ p {
 .pdf-button span {
   height: 100%;
   width: 100%;
-  color: #4a245e;
+  color: var(--primary);
   font-size: clamp(1rem, 2rem, 3rem);
   transition-duration: 500ms;
 }
 
 .pdf-button:hover,
 .pdf-button:hover span {
-  background-color: #4a245e;
-  color: #ebd2ff;
+  background-color: var(--primary);
+  color: var(--text);
 }
 
 /**SLCC Navigation Bar**/
@@ -546,20 +541,20 @@ p {
 }
 
 .nav-item {
-  border-left: 2px solid #4a245e;
-  border-right: 2px solid #4a245e;
+  border-left: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   list-style: none;
   padding: 2vw;
-  color: #4a245e;
-  background-color: #ebd2ff;
+  color: var(--primary);
+  background-color: var(--text);
   transition-duration: 500ms;
 }
 
 .nav-item:hover,
 .nav-item-active {
-  background-color: #4a245e;
-  color: #ebd2ff;
+  background-color: var(--primary);
+  color: var(--text);
 }
 
 /**SLCC Course View**/
@@ -581,17 +576,17 @@ p {
 }
 
 .course-nav-selector {
-  border-bottom: 1px solid #4a245e;
-  background-color: #ebd2ff;
-  color: #4a245e;
+  border-bottom: 1px solid var(--primary);
+  background-color: var(--text);
+  color: var(--primary);
   height: 100%;
   transition-duration: 500ms;
 }
 
 .course-nav-selector:hover,
 .course-nav-selector-active {
-  color: #ebd2ff;
-  background-color: #4a245e;
+  color: var(--text);
+  background-color: var(--primary);
 }
 
 #course-view {
@@ -625,20 +620,29 @@ p {
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  color: #ebd2ff !important;
+  color: var(--text) !important;
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  color: #ebd2ff !important;
+  color: var(--text) !important;
 }
 
 .swiper-button-prev.swiper-button-disabled {
-  color: #ebd2ff !important;
+  color: var(--text) !important;
 }
 
 .swiper-button-next.swiper-button-disabled {
-  color: #ebd2ff !important;
+  color: var(--text) !important;
+}
+
+.error-page {
+  margin-top: 5vw;
+  margin-left: 5vw;
+}
+
+.error-page a {
+  width: 50%;
 }
 
 /**Animations**/
@@ -653,6 +657,7 @@ p {
     transform: translateY(-20px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -664,6 +669,7 @@ p {
     transform: translateY(-40px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -675,6 +681,7 @@ p {
     transform: translateY(calc(var(--width) / -5));
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -713,6 +720,7 @@ p {
 }
 
 @media (max-width: 790px) {
+
   #primary,
   #slcc-splash {
     width: 100%;
@@ -821,8 +829,7 @@ p {
     border-radius: 10px;
   }
 
-  .down-indicator {
-  }
+  .down-indicator {}
 }
 
 @media (max-width: 485px) {
