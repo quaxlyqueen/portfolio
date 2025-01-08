@@ -33,7 +33,7 @@ export default function PdfViewer({ file }) {
           }}
           className="pdf-document"
         >
-          <Page pageNumber={pageNumber} scale={0.66} />
+          <Page pageNumber={pageNumber} scale={0.8} />
         </Document>
         <div className="pdf-buttons shadow">
           <button className="pdf-button" onClick={() => prev()}>

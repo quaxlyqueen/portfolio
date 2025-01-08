@@ -50,14 +50,14 @@ Features
 - [x] Template HTML blocks for repeated components. (v.0.0.1)
 - [x] Resume page (HTML and PDF options). (v.0.0.1)
 - [x] Contact page. (v.0.0.1)
-- [ ] Convert SLCC e-portfolio to my own website (v.0.0.1)
+- [x] Proper 404 page (v.0.0.1)
 - [ ] Security:
   - [ ] Separate user for self-hosting, with reduced permissions. (v.0.0.1)
   - [ ] Dockerize (v.0.0.1)
-- [ ] Proper 404 page (v.0.0.1)
 
 Future Features:
 
+- [ ] Convert SLCC e-portfolio to my own website (v.0.0.2)
 - [ ] Read in data for portfolio from a DB or preferably a plain text files. (v.0.0.2)
 - [ ] Script to easily add new projects. (v.0.0.2)
 - [ ] Demo's of various projects. (embed Java Swing app or Flutter app directly into portfolio). (v.0.0.2)
@@ -71,3 +71,26 @@ Minor Bugs:
 
 - [ ] Contact form submission centers entire section. (v.0.0.2)
 - [ ] Profile picture animation is slightly cutoff on mobile. (v.0.0.2)
+
+
+
+COLORSCHEMES:
+--dark-0: #170123;
+--dark-1: #39124e;
+--dark-2: #5e3276;
+--dark-3: #84509f;
+--primary: #4a245e;
+--accent-1: #9e75a8;
+--accent-2: #c69bca;
+--text: #EBD2FF;
+
+--dark-0: #091A19;
+--dark-1: #10211E;
+--dark-2: #162722;
+--dark-3: #1C2E26;
+--primary-1: #304334;
+--primary: #6B825C;
+--accent-0: #90D889;
+--accent-1: #8FC973;
+--accent-2: #B8DAA6;
+--text: #E0EAD9;

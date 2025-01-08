@@ -105,10 +105,10 @@ export default function App() {
     ],
     tools: [
       "Git & GitHub",
-      "Docker & Kubernetes",
-      "Flutter",
-      "React",
-      "Linux",
+      "Docker",
+      "Flutter & React",
+      "Linux & NeoVim",
+      "Cloudflare",
       "Microsoft Intune",
     ],
     other: [

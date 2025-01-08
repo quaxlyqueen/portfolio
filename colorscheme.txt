@@ -1,0 +1,19 @@
+--dark-0: #170123;
+--dark-1: #39124e;
+--dark-2: #5e3276;
+--dark-3: #84509f;
+--primary: #4a245e;
+--accent-1: #9e75a8;
+--accent-2: #c69bca;
+--text: #EBD2FF;
+
+--dark-0: #091A19;
+--dark-1: #10211E;
+--dark-2: #162722;
+--dark-3: #1C2E26;
+--primary-1: #304334;
+--primary: #6B825C;
+--accent-0: #90D889;
+--accent-1: #8FC973;
+--accent-2: #B8DAA6;
+--text: #E0EAD9;
