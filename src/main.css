@@ -41,39 +41,64 @@ body {
   background-attachment: fixed;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  color: var(--text);
+}
+
 h1 {
   font-size: clamp(4.25rem, 5.5vw, 10rem);
   font-weight: 600;
   letter-spacing: 2px;
   width: max-content;
-  color: var(--text);
 }
 
-h3,
-h4 {
-  color: var(--text);
-  font-weight: 300;
-  line-height: 1.5;
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: max-content;
 }
 
 h2 {
   font-size: clamp(2rem, 3vw, 4rem);
-  font-weight: 600;
-  letter-spacing: 2px;
-  width: max-content;
-  color: var(--text);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: clamp(1.5rem, 2rem, 3rem);
 }
 
 h4 {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h5,
+h6 {
+  font-weight: 300;
+}
+
+h4 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.125vw, 1.25rem);
 }
 
 p {
-  font-size: clamp(1rem, 1.5rem, 2rem);
+  font-weight: 200;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   color: var(--text);
 }
 
@@ -530,6 +555,8 @@ p {
 #resume-section {
   margin: 2vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /**PDF Viewer**/
@@ -690,6 +717,40 @@ p {
 
 .error-page a {
   width: 50%;
+}
+
+.job {
+  width: 100%;
+  border: 1px solid white;
+}
+
+.job-header-row {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+}
+
+.job-time {
+  justify-self: right;
+  justify-content: right;
+}
+
+.company-and-location {
+  display: flex;
+  align-items: center;
+}
+
+.company-and-location h6 {
+  margin-left: .25vw;
+}
+
+.job-list {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.job-list-item {
+  font-weight: 300;
 }
 
 /**Animations**/
