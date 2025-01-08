@@ -28,15 +28,15 @@ export default function Projects({ cardData }) {
           <div id="projects-header-row">
             <h1>Projects</h1>
             <div id="projects-nav-buttons">
-              <div className="slider-nav-button shadow tooltip" onClick={prevSlide}>
-                <span className="material-icons">
+              <div className="slider-nav-button tooltip" onClick={prevSlide}>
+                <span className="material-icons project-nav-icon">
                   chevron_left
                 </span>
                 <span className="tooltip-text">Previous Project</span>
               </div>
 
-              <div className="slider-nav-button shadow tooltip" onClick={nextSlide}>
-                <span className="material-icons">
+              <div className="slider-nav-button tooltip" onClick={nextSlide}>
+                <span className="material-icons project-nav-icon">
                   chevron_right
                 </span>
                 <span className="tooltip-text">Next Project</span>
@@ -46,7 +46,7 @@ export default function Projects({ cardData }) {
           <Swiper
             modules={[Navigation, Scrollbar]}
             navigation
-            slidesPerView={1.2}
+            slidesPerView={1}
             loop={false}
             id="project-cards-section"
             className="mySwiper"
