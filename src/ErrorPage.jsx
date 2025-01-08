@@ -1,6 +1,14 @@
 import React from "react";
 
-export default function ErrorPage({ errorCode, errorMessage }) {
+/*
+ * An error page component, typically used for 404 errors, but available for use for any other errors.
+ *
+ * TODO: Stylize the error page.
+ *
+ * @param errorCode String
+ * @param errorMessage String
+ */
+const ErrorPage = ({ errorCode, errorMessage }) => {
   return (
     <>
       <div className="error-page">
@@ -14,3 +22,5 @@ export default function ErrorPage({ errorCode, errorMessage }) {
     </>
   );
 }
+
+export default ErrorPage;

@@ -1,15 +1,27 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-export default function ProjectCard({
+/*
+ * An individual Project Card component, generated from project data in /App.jsx. Displays an image/gif
+ * of the project to the left on desktop, and above on mobile, a card. This card is simple, just a header,
+ * some description text, a list of implemented features, and a button to navigate to the GitHub for the 
+ * project.
+ *
+ * Managed by /Projects.jsx.
+ * Data by /App.jsx.
+ *
+ * @param title String
+ * @param description String
+ * @param featureList String[]
+ * @param image String
+ * @param url String
+ */
+const ProjectCard = ({
   title,
-  descriptionA,
+  description,
   featureList,
   image,
-  imageGallery,
   url,
-}) {
+}) => {
   return (
     <div className="project-card">
       <div className="img-container">
@@ -18,7 +30,7 @@ export default function ProjectCard({
       <div className="project-text-column shadow">
         <div className="project-text">
           <h3>{title}</h3>
-          <p>{descriptionA}</p>
+          <p>{description}</p>
           <ul className="feature-list">
             {featureList.map((item, index) => (
               <li key={index}>{item}</li>
@@ -34,3 +46,5 @@ export default function ProjectCard({
     </div>
   );
 }
+
+export default ProjectCard;

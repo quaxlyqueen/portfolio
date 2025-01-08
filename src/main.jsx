@@ -5,8 +5,11 @@ import App from "./App.jsx";
 import Resume from "./Resume.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 
+/*
+ * Root React container and renderer. Also manages the router. Any new pages should be added here.
+ */
 const container = document.getElementById("app");
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
+const root = createRoot(container);
 root.render(
   <Router>
     <Routes>

@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 
-/**
- * TODO: Add email validation function.
+/*
+ * Contact page or "slide". The contact form functionality is enabled by a NodeJS server,
+ * see /server.js. A basic form for getting contact information. Emails are sent to me@joshashton.dev
+ * from contact@joshashton.dev.
+ *
+ * TODO: Handle blank and spam inputs.
+ *
+ * Managed by /App.jsx.
+ * Interacts with /server.js.
  */
-export default function Contact() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     emailAddress: "",
@@ -12,6 +19,7 @@ export default function Contact() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // Update form data to always be up to date with the entries on the form.
   const handleChange = (event) => {
     setFormData({
       ...formData,
@@ -19,6 +27,7 @@ export default function Contact() {
     });
   };
 
+  // Transmit data to the server's API for sending email.
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     setIsSubmitted(true);
@@ -85,3 +94,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default Contact;

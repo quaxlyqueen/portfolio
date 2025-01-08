@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import SkillCard from "./components/SkillCard";
 
-export default function Home({ primaryText, secondaryText, image, skills }) {
+/**
+ * "Home" page/slide of my portfolio.
+ *
+ * Managed by /App.jsx.
+ * Data by /App.jsx.
+ *
+ * @param image String
+ * @param skills json, containing JSON values of String arrays.
+ */
+const Home = ({ image, skills }) => {
+  // Manage active card state, defaulting to languages card being active or open. Mobile only.
   const [activeCardIndex, setActiveCardIndex] = useState(0);
+
   return (
     <>
       <div id="primary">
@@ -12,43 +23,39 @@ export default function Home({ primaryText, secondaryText, image, skills }) {
           </div>
           <div className="header-text">
             <div className="center-column">
-              <h1>{primaryText}</h1>
-              <h3>{secondaryText}</h3>
+              <h1>Hi, I'm Josh Ashton.</h1>
+              <h3>Junior full-stack developer.</h3>
               <a className="button" href="/resume" target="_blank">
                 <div className="button-grid">Access my resume</div>
               </a>
             </div>
           </div>
         </div>
-        {skills.languages !== null ? (
-          <div id="skill-cards">
-            <div id="card-grid">
-              <SkillCard
-                header="Languages"
-                symbol="code"
-                list={skills.languages}
-                isActive={activeCardIndex === 0}
-                onToggle={() => setActiveCardIndex(0)}
-              />
-              <SkillCard
-                header="Tools"
-                symbol="terminal"
-                list={skills.tools}
-                isActive={activeCardIndex === 1}
-                onToggle={() => setActiveCardIndex(1)}
-              />
-              <SkillCard
-                header="Other"
-                symbol="hub"
-                list={skills.other}
-                isActive={activeCardIndex === 2}
-                onToggle={() => setActiveCardIndex(2)}
-              />
-            </div>
+        <div id="skill-cards">
+          <div id="card-grid">
+            <SkillCard
+              header="Languages"
+              symbol="code"
+              list={skills.languages}
+              isActive={activeCardIndex === 0}
+              onToggle={() => setActiveCardIndex(0)}
+            />
+            <SkillCard
+              header="Tools"
+              symbol="terminal"
+              list={skills.tools}
+              isActive={activeCardIndex === 1}
+              onToggle={() => setActiveCardIndex(1)}
+            />
+            <SkillCard
+              header="Other"
+              symbol="hub"
+              list={skills.other}
+              isActive={activeCardIndex === 2}
+              onToggle={() => setActiveCardIndex(2)}
+            />
           </div>
-        ) : (
-          <p>Something here</p>
-        )}
+        </div>
         <span className="material-icons down-indicator">
           keyboard_double_arrow_down
         </span>
@@ -56,3 +63,5 @@ export default function Home({ primaryText, secondaryText, image, skills }) {
     </>
   );
 }
+
+export default Home;

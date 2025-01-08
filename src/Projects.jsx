@@ -1,12 +1,25 @@
 import React, { useRef } from "react";
 import ProjectCard from "./components/ProjectCard";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation, Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/scrollbar";
 
-export default function Projects({ cardData }) {
+/*
+ * The Projects page or "slide". Implements swiperjs (see documentation at https://swiperjs.com/) to create a nested
+ * slider/swiper inside of the root VerticalSlider. This nested slider is horizontal, and displays Project Cards
+ * (see /components/ProjectCard.jsx), generated for each element of the parameter cardData.
+ *
+ * Managed by /App.jsx.
+ * Data by /App.jsx.
+ *
+ * @param cardData json[], each object contains the following: title, descriptionA, featureList, image, url
+ *
+ * TODO: Cursor icon when hover on the slide buttons should be a pointer, not highlighter.
+ */
+const Projects = ({ cardData }) => {
+  // Reference the nested slider instead of the root slider.
   const projectSwiperRef = useRef(null);
 
   const prevSlide = () => {
@@ -44,8 +57,7 @@ export default function Projects({ cardData }) {
             </div>
           </div>
           <Swiper
-            modules={[Navigation, Scrollbar]}
-            navigation
+            modules={[Scrollbar]}
             slidesPerView={1}
             loop={false}
             id="project-cards-section"
@@ -57,10 +69,9 @@ export default function Projects({ cardData }) {
               <SwiperSlide key={index}>
                 <ProjectCard
                   title={c.title}
-                  descriptionA={c.descriptionA}
+                  description={c.description}
                   featureList={c.featureList}
                   image={c.image}
-                  imageGallery={c.imageGallery}
                   url={c.url}
                 />
               </SwiperSlide>
@@ -71,3 +82,5 @@ export default function Projects({ cardData }) {
     </>
   );
 }
+
+export default Projects;

@@ -5,27 +5,23 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import "./main.css";
 
-/**
- * TODO: Read in data from a plain text file for easier editing in the future.
+/*
+ * Primary portfolio application. Utilizes swiper.js (via /components/VerticalSlider.jsx) to
+ * have a scrolling section to section effect.
+ *
+ * This is the primary place where (currently) application data is stored. This information will be read in
+ * from plain-text files in the future for ease of future editing. In the meantime, generated components,
+ * specifically the Skill Card and Project Card (see /components/SkillCard.jsx and /components/ProjectCard.jsx)
+ * get their data from here and thus any additions are made in this file.
+ *
+ * TODO: Read in data from a plain text file for easier editing in the future, and to separate domains.
  */
-export default function App() {
+const App = () => {
   // DATA VARIABLES
-  /*
-   {
-    title: "",
-    descriptionA: "",
-    featureList: [
-
-    ],
-    image: "",
-    imageGallery: null,
-    url: ""
-   },
-*/
   const projectData = [
     {
       title: "One AI",
-      descriptionA:
+      description:
         "An end-to-end self-hosted Artificial Intelligence solution, using Meta's Ollama platform to run Large Language Models. Go was used for the backend as a wrapper API and the frontend is Flutter. Here are some of the implemented features:",
       featureList: [
         "AES encryption of messages between client and server",
@@ -39,7 +35,7 @@ export default function App() {
     },
     {
       title: "Snake",
-      descriptionA:
+      description:
         "A Snake clone in the command line, written in C#. Utilized a Queue data structure to keep track of the snake's body. Implemented features include:",
       featureList: [
         "basic pseudo-randomized obstacle generation",
@@ -53,7 +49,7 @@ export default function App() {
     },
     {
       title: "Battery Monitor",
-      descriptionA:
+      description:
         "A battery monitor, written in C with a GUI written in Python. Utilizes the acpi Unix command to gather battery information. Implemented features incldue:",
       featureList: [
         "embed Unix commands in C to get the date, time, battery percentage, and battery status",
@@ -68,7 +64,7 @@ export default function App() {
     },
     {
       title: "D&D Character Builder",
-      descriptionA:
+      description:
         "A Dungeons and Dragons character builder, following the 5th edition rules and creation process. A collaborative project creating a GUI in Java with Swing. Features include:",
       featureList: [
         "serialization of character data into custom filetype",
@@ -81,7 +77,7 @@ export default function App() {
     },
     {
       title: "Calculator",
-      descriptionA:
+      description:
         "A simple and themable calculator written in Python. This uses CustomTKinter for the GUI and the eva CLI package for the actual calculator functionality. Supports MacOS and Linux. Implemented features include:",
       featureList: [
         "custom theming read in from a global .theme file",
@@ -123,9 +119,6 @@ export default function App() {
 
   const slides = [
     <Home
-      primaryText="Hi, I'm Josh Ashton."
-      secondaryText="Junior full-stack developer."
-      callToAction="Here's my resume."
       image="/images/profile.jpg"
       skills={skillsData}
     />,
@@ -135,3 +128,5 @@ export default function App() {
 
   return <VerticalSlider slides={slides} />;
 }
+
+export default App;
