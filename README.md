@@ -83,14 +83,14 @@ serve -s
 - [x] Template HTML blocks for repeated components. (v.0.0.1)
 - [x] Contact page. (v.0.0.1)
 - [x] Proper 404 page (v.0.0.1)
-- [ ] Resume page (HTML and PDF options). (v.0.0.1)
-  - [ ] Make resume 1 page (v.0.0.1)
-- [ ] Security:
-  - [ ] Separate user for self-hosting, with reduced permissions. (v.0.0.1)
-  - [ ] Dockerize (v.0.0.1)
+- [x] Resume page (HTML and PDF options). (v.0.0.1)
+  - [x] Make resume 1 page (v.0.0.1)
 
 <h3>Future Features:</h3>
 
+- [ ] Security:
+  - [ ] Separate user for self-hosting, with reduced permissions. (v.0.0.2)
+  - [ ] Dockerize (v.0.0.2)
 - [ ] Rewrite CSS into components/modules (v.0.0.2)
 - [ ] Read in data for portfolio a plain text files. (v.0.0.2)
 - [ ] Script to easily add new projects. (v.0.0.2)
