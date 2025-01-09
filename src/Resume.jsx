@@ -6,7 +6,7 @@ import React from "react";
  * TODO: Rework resume to make it one page
  * TODO: Convert resume to a React component, with a link to save as PDF
  */
-export default function Resume() {
+export default function Resume({ jobData, eduData, skillData }) {
   /*
    *     
   {
@@ -21,57 +21,47 @@ export default function Resume() {
   },
 
    */
-  const jobData = [
-    {
-      company: "SLC Public Library",
-      title: "Technology & Digital Equity Assistant",
-      start: "Aug. 2023",
-      end: "Present",
-      location: "Salt Lake City, UT",
-      responsibilities: [
-        "Assist library patrons with using technology, on devices such as publicly available PCs, laptops, mobile devices, and more.",
-        "Teach fundamental computer usage skills.",
-        "Expose patrons to the importance of digital security, password management, and two-factor authentication.",
-        "Developing workshop curriculum for Raspberry Pi’s."
-      ],
-    },
-    {
-      company: "Trust Lands Administration",
-      title: "IT Intern",
-      start: "Aug. 2023",
-      end: "Aug. 2024",
-      location: "Salt Lake City, UT",
-      responsibilities: [
-        "Orchestrated Microsoft Intune setup and deployment to multiple platforms.",
-        "Streamlined IT equipment inventory process",
-        "Provided training to optimize the usage of hardware and software.",
-        "Troubleshoot and repair hardware and software on a variety of devices.",
-        "Developed automation scripts for use in various parts of the business.",
-      ],
-    },
-  ];
 
-  const eduData = [
-    {
-      institution: "",
-      degree: "",
-      gpa: "",
-      start: "",
-      end: "",
-    }
-  ];
   return (
     <>
       <div id="resume-section">
         <h1>Josh Ashton</h1>
-        <h2>Junior Full-Stack Developer</h2>
+        <h3>Junior Full-Stack Developer</h3>
         <h3>Work Experience</h3>
-        {jobData.map((job, index) => (
-          <Job key={index} company={job.company} title={job.title} start={job.start} end={job.end} location={job.location} responsibilities={job.responsibilities} />
-        ))}
+        <div className="jobs">
+          {jobData.map((job, index) => (
+            <Job key={index} company={job.company} title={job.title} start={job.start} end={job.end} location={job.location} responsibilities={job.responsibilities} />
+          ))}
+        </div>
         <h3>Education</h3>
+        <div className="education-section">
+          {eduData.map((edu, index) => (
+            <Education key={index} institution={edu.institution} degree={edu.degree} gpa={edu.gpa} start={edu.start} end={edu.end} />
+          ))}
+        </div>
+        <h3>Skills</h3>
+        <Skill languages={skillData.languages} tools={skillData.tools} other={skillData.other} />
+      </div>
+    </>
+  );
+}
 
-        <a href="/"><h3>Click here for my coding experience & skills!</h3></a>
+function Skill({ languages, tools, other }) {
+  return (
+    <>
+      <div className="resume-skills">
+        <div className="resume-skills-skill">
+          <h4>Languages:</h4>
+          <p>{languages.join(", ")}</p>
+        </div>
+        <div className="resume-skills-skill">
+          <h4>Tools:</h4>
+          <p>{tools.join(", ")}</p>
+        </div>
+        <div className="resume-skills-skill">
+          <h4>Other:</h4>
+          <p>{other.join(", ")}</p>
+        </div>
       </div>
     </>
   );
@@ -81,16 +71,18 @@ function Education({ institution, degree, gpa, start, end }) {
   return (
     <>
 
-      <div className="edu-header">
-        <div className="edu-header-row">
-          <div className="edu-and-degree">
-            <h4>{institution}</h4>
-            <h6>- {degree}</h6>
+      <div className="edu">
+        <div className="edu-header">
+          <div className="edu-header-row">
+            <div className="edu-and-degree">
+              <h4>{institution}</h4>
+              <h6>- {degree}</h6>
+            </div>
+            <h6 className="edu-time">{start} - {end}</h6>
           </div>
-          <h6 className="edu-time">{start} - {end}</h6>
+          <h5>{gpa}</h5>
         </div>
       </div>
-
     </>
   );
 }

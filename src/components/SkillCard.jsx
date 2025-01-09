@@ -32,7 +32,7 @@ const SkillCard = ({ header, symbol, list, isActive, onToggle }) => {
     <div className="card shadow">
       <div className="skill-card-header" onClick={() => onToggle()}>
         <span className="material-icons skill-symbol">{symbol}</span>
-        <h3>{header}</h3>
+        <h4>{header}</h4>
       </div>
       {(isActive || !isMobile) && (
         <ul>
