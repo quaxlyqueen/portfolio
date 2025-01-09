@@ -5,6 +5,9 @@ import React, { useState, useEffect } from "react";
  *
  * On mobile, only one card at a time may be active. The currently active card is
  * managed by the parent component, Home.jsx, via the isActive and onToggle props.
+ *
+ * Managed by /Home.jsx.
+ * Data by /main.jsx > /App.jsx > /Home.jsx
  * 
  * @param header String, the skill card's header
  * @param symbol String, a Material Icon from https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed

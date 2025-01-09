@@ -8,6 +8,12 @@ import "./main.css";
 /*
  * Primary portfolio application. Utilizes swiper.js (via /components/VerticalSlider.jsx) to
  * have a scrolling section to section effect.
+ *
+ * Managed by /main.jsx.
+ * Data by /main.jsx.
+ *
+ * @param projectData JSON[], data necessary to create project cards.
+ * @param skillData JSON, data necessary to create skill cards.
  */
 const App = ({ projectData, skillData }) => {
   const slides = [

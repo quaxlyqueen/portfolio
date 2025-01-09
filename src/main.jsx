@@ -6,12 +6,14 @@ import Resume from "./Resume.jsx";
 import ErrorPage from "./ErrorPage.jsx";
 
 /*
- * Root React container and renderer. Also manages the router. Any new pages should be added here.
+ * Root React container and renderer.
+ *
+ * Contains all data and data processing, as well as routing to different pages.
+ * TODO: Read data in from plain text files.
  */
 const container = document.getElementById("app");
 const root = createRoot(container);
 
-// TODO: Read data in from plain text files.
 const projectData = [
   {
     title: "One AI",

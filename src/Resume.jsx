@@ -1,27 +1,9 @@
 import React from "react";
 
 /*
- * Page to display my Resume.
- *
- * TODO: Rework resume to make it one page
- * TODO: Convert resume to a React component, with a link to save as PDF
+ * Resume page component.
  */
-export default function Resume({ jobData, eduData, skillData }) {
-  /*
-   *     
-  {
-    company: "",
-    title: "",
-    start: "",
-    end: "",
-    location: "",
-    responsibilities: [
-      "",
-    ],
-  },
-
-   */
-
+const Resume = ({ jobData, eduData, skillData }) => {
   return (
     <>
       <div id="resume-section">
@@ -110,3 +92,5 @@ function Job({ company, title, start, end, location, responsibilities }) {
     </>
   )
 }
+
+export default Resume;

@@ -7,7 +7,7 @@ import React from "react";
  * project.
  *
  * Managed by /Projects.jsx.
- * Data by /App.jsx.
+ * Data by /main.jsx > /App.jsx > /Projects.jsx.
  *
  * @param title String
  * @param description String
