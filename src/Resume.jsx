@@ -50,6 +50,16 @@ export default function Resume() {
       ],
     },
   ];
+
+  const eduData = [
+    {
+      institution: "",
+      degree: "",
+      gpa: "",
+      start: "",
+      end: "",
+    }
+  ];
   return (
     <>
       <div id="resume-section">
@@ -59,8 +69,28 @@ export default function Resume() {
         {jobData.map((job, index) => (
           <Job key={index} company={job.company} title={job.title} start={job.start} end={job.end} location={job.location} responsibilities={job.responsibilities} />
         ))}
-        <a href="/"><h3>Coding Experience</h3></a>
+        <h3>Education</h3>
+
+        <a href="/"><h3>Click here for my coding experience & skills!</h3></a>
       </div>
+    </>
+  );
+}
+
+function Education({ institution, degree, gpa, start, end }) {
+  return (
+    <>
+
+      <div className="edu-header">
+        <div className="edu-header-row">
+          <div className="edu-and-degree">
+            <h4>{institution}</h4>
+            <h6>- {degree}</h6>
+          </div>
+          <h6 className="edu-time">{start} - {end}</h6>
+        </div>
+      </div>
+
     </>
   );
 }

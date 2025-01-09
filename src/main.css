@@ -721,7 +721,8 @@ p {
 
 .job {
   width: 100%;
-  border: 1px solid white;
+  border-top: 1px solid var(--accent-0);
+  padding: 0vw 1vw 1vw 1vw;
 }
 
 .job-header-row {
@@ -732,7 +733,6 @@ p {
 
 .job-time {
   justify-self: right;
-  justify-content: right;
 }
 
 .company-and-location {

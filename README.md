@@ -91,6 +91,7 @@ serve -s
 
 <h3>Future Features:</h3>
 
+- [ ] .down-indicator popup text on hover, "scroll down to see my projects!"
 - [ ] Rewrite CSS into components/modules (v.0.0.2)
 - [ ] Read in data for portfolio a plain text files. (v.0.0.2)
 - [ ] Script to easily add new projects. (v.0.0.2)
