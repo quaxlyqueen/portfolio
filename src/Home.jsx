@@ -5,7 +5,7 @@ import SkillCard from "./components/SkillCard";
  * "Home" page/slide of my portfolio.
  *
  * Managed by /App.jsx.
- * Data by /App.jsx.
+ * Data by /main.jsx.
  *
  * @param image String
  * @param skills json, containing JSON values of String arrays.
@@ -18,10 +18,10 @@ const Home = ({ image, skills }) => {
     <>
       <div id="primary">
         <div className="header">
-          <div className="header-image">
+          <div className="header-image center-row">
             <img id="profile" src={image} />
           </div>
-          <div className="header-text">
+          <div className="center-column">
             <div className="center-column">
               <h1>Hi, I'm Josh Ashton.</h1>
               <h3>Junior full-stack developer.</h3>
@@ -32,7 +32,7 @@ const Home = ({ image, skills }) => {
           </div>
         </div>
         <div id="skill-cards">
-          <div id="card-grid">
+          <div className="center-row">
             <SkillCard
               header="Languages"
               symbol="code"

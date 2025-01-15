@@ -41,39 +41,65 @@ body {
   background-attachment: fixed;
 }
 
-h1 {
-  font-size: clamp(4.25rem, 5.5vw, 10rem);
-  font-weight: 600;
-  letter-spacing: 2px;
-  width: max-content;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
   color: var(--text);
 }
 
-h3,
-h4 {
-  color: var(--text);
-  font-weight: 300;
-  line-height: 1.5;
+h1 {
+  font-size: clamp(4rem, 5vw, 10rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: max-content;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  width: max-content;
 }
 
 h2 {
-  font-size: clamp(2rem, 3vw, 4rem);
-  font-weight: 600;
-  letter-spacing: 2px;
-  width: max-content;
-  color: var(--text);
+  font-size: clamp(3rem, 4vw, 7rem);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: clamp(2rem, 3rem, 6rem);
 }
 
 h4 {
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-p {
-  font-size: clamp(1rem, 1.5rem, 2rem);
+h5,
+h6 {
+  font-weight: 300;
+}
+
+h4 {
+  font-size: clamp(1rem, 1.5vw, 4rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 1.25vw, 3.5rem);
+}
+
+h6 {
+  font-size: clamp(1rem, 1.125vw, 2rem);
+}
+
+p,
+li {
+  font-weight: 300;
+  font-size: clamp(1rem, 1.1vw, 1.5rem);
   color: var(--text);
 }
 
@@ -139,7 +165,7 @@ p {
 }
 
 .mySwiper {
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -278,8 +304,8 @@ p {
   border-radius: 18px 18px 0 0;
 }
 
-.skill-card-header h3 {
-  font-size: clamp(1.3rem, 2vw, 3rem);
+.skill-card-header h4 {
+  font-weight: 700;
   text-align: right;
 }
 
@@ -299,7 +325,6 @@ p {
 
 .card ul li {
   list-style: none;
-  font-size: clamp(1rem, 1.25vw, 1.5rem);
   color: var(--dark-0);
 }
 
@@ -352,7 +377,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 5vw;
 }
 
 /* Tooltip container */
@@ -424,6 +448,7 @@ p {
 }
 
 .project-text p {
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,7 +472,6 @@ p {
 }
 
 .feature-list li {
-  font-size: clamp(1rem, 1.5rem, 2rem);
   color: var(--text);
 }
 
@@ -530,6 +554,8 @@ p {
 #resume-section {
   margin: 2vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /**PDF Viewer**/
@@ -690,6 +716,65 @@ p {
 
 .error-page a {
   width: 50%;
+}
+
+.jobs,
+.education-section {
+  border-top: 1px solid var(--accent-0);
+  width: 100%;
+}
+
+.job,
+.edu {
+  width: 100%;
+  padding: 0vw 1vw 1vw 1vw;
+}
+
+.job-header-row,
+.edu-header-row {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+}
+
+.job-time,
+.edu-time {
+  justify-self: right;
+}
+
+.company-and-location,
+.edu-and-degree {
+  display: flex;
+  align-items: center;
+}
+
+.company-and-location h6,
+.edu-and-degree h6 {
+  margin-left: .25vw;
+}
+
+.job-list {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.job-list-item {
+  font-weight: 300;
+}
+
+.resume-skills {
+  border-top: 1px solid var(--accent-0);
+  width: 100%;
+}
+
+.resume-skills-skill {
+  display: flex;
+  align-items: center;
+}
+
+.resume-skills-skill p {
+  margin-left: .5vw;
+  padding: 1vw;
 }
 
 /**Animations**/

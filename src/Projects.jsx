@@ -12,7 +12,7 @@ import "swiper/css/scrollbar";
  * (see /components/ProjectCard.jsx), generated for each element of the parameter cardData.
  *
  * Managed by /App.jsx.
- * Data by /App.jsx.
+ * Data by /main.jsx.
  *
  * @param cardData json[], each object contains the following: title, descriptionA, featureList, image, url
  *
