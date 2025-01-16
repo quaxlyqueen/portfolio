@@ -1,11 +1,13 @@
 import express from "express";
 import cors from "cors";
 import postmark from "postmark";
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 const app = express();
 const port = 3001; // Example port
-const client = new postmark.ServerClient(
-  "d15a4575-17f1-4ead-8e53-69eb2faea982",
-);
+const apiKey = process.env.API_KEY;
+const client = new postmark.ServerClient(apiKey);
 
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON data
