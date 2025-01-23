@@ -85,10 +85,10 @@ serve -s
 - [x] Proper 404 page (v.0.0.1)
 - [x] Resume page (HTML and PDF options). (v.0.0.1)
   - [x] Make resume 1 page (v.0.0.1)
-- [X] CI/CD (v.0.0.1)
 
 <h3>Future Features:</h3>
 
+- [X] CI/CD (v.0.0.2)
 - [ ] Security:
   - [ ] Separate user for self-hosting, with reduced permissions. (v.0.0.2)
   - [ ] Dockerize (v.0.0.2)
