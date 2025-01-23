@@ -32,7 +32,7 @@ const Home = ({ image, skills }) => {
           </div>
         </div>
         <div id="skill-cards">
-          <div className="center-row">
+          <div className="center-row" id="skill-cards-colrow">
             <SkillCard
               header="Languages"
               symbol="code"

@@ -270,13 +270,6 @@ li {
   width: 100%;
 }
 
-#card-grid {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
 /**SKILL CARDS**/
 .card {
   text-align: center;
@@ -950,11 +943,8 @@ li {
     margin-left: 5vw;
   }
 
-  #card-grid {
-    display: flex;
+  #skill-cards-colrow {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .button {

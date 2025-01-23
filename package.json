@@ -5,6 +5,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "postmark": "^4.0.5",
     "react": "^18.2.0",
@@ -24,5 +25,6 @@
     "build": "vite build",
     "dev": "vite --host",
     "start": "vite --host"
-  }
+  },
+  "type": "module"
 }
