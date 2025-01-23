@@ -85,13 +85,13 @@ serve -s
 - [x] Proper 404 page (v.0.0.1)
 - [x] Resume page (HTML and PDF options). (v.0.0.1)
   - [x] Make resume 1 page (v.0.0.1)
-- [X] CI/CD (v.0.0.2)
-- [ ] Security:
-  - [ ] Separate user for self-hosting, with reduced permissions. (v.0.0.1)
-  - [ ] Dockerize (v.0.0.1)
+- [X] CI/CD (v.0.0.1)
 
 <h3>Future Features:</h3>
 
+- [ ] Security:
+  - [ ] Separate user for self-hosting, with reduced permissions. (v.0.0.2)
+  - [ ] Dockerize (v.0.0.2)
 - [ ] .down-indicator popup text on hover, "scroll down to see my projects!"
 - [ ] Rewrite CSS into components/modules (v.0.0.2)
 - [ ] Read in data for portfolio a plain text files. (v.0.0.2)
