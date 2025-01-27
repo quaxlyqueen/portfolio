@@ -33,4 +33,6 @@ jobs:
 
       # Connects to your server via ssh and runs the deploy bash script
       - name: Run Deploy Script
-        run: ssh -i ~/.ssh/id_rsa prod@${{secrets.IP_ADDRESS}} sh portfolio/portfolio-deploy.sh
+        run: |
+          ssh -i ~/.ssh/id_rsa prod@${{secrets.IP_ADDRESS}} sh deploy.sh portfolio-client
+          ssh -i ~/.ssh/id_rsa prod@${{secrets.IP_ADDRESS}} sh deploy.sh portfolio-server
