@@ -18,7 +18,7 @@ import "./main.css";
 const App = ({ projectData, skillData }) => {
   const slides = [
     <Home
-      image="/app/images/profile.jpg"
+      image="/images/profile.jpg"
       skills={skillData}
     />,
     <Projects cardData={projectData} />,

@@ -12,11 +12,12 @@ COPY package.json /app
 RUN npm install
 
 # Copy the rest of the React app
-COPY public/images/. /app/images/
 COPY src/. /app/src/
 
 # Build the React app for production
 RUN npm run build
+
+COPY public/images/. /app/dist/images/
 
 # Expose the port your React app will run on (usually 3000)
 EXPOSE 3000
