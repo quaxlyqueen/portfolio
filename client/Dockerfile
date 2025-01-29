@@ -12,6 +12,7 @@ COPY package.json /app
 RUN npm install
 
 # Copy the rest of the React app
+COPY public/. /app/public/
 COPY src/. /app/src/
 
 # Build the React app for production
